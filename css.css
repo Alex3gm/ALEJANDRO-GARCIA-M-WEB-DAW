@@ -87,6 +87,8 @@ body{ background:white;
       list-style:none;
       
   }
+
+  
   
   
 
@@ -94,7 +96,7 @@ body{ background:white;
   
       display:inline;
       vertical-align:top;
-      width:5%;
+      width:10%;
       border-left: 1px solid black;
       padding-left: 2px;
       margin-right: 3px;
@@ -112,6 +114,11 @@ body{ background:white;
         color:#a545bd;
       transition: color .3s;
   }
+
+  .registro_inicio nav ul li p:hover{
+    color:#a545bd;
+  transition: color .3s;
+}
 
   .icono {
     display: inline-block;
