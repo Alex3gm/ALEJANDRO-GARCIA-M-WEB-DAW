@@ -1,0 +1,600 @@
+
+  body{ background:white;
+    margin:0;
+    padding: 0
+  }
+   
+  
+  /* modelo responsivo para la WEB ( Hacerlo futura entrega con cada seccion)
+  @media only screen and (max-width: 720px) {
+    .product-container {
+    width: 50%;
+    }
+    }
+    
+    @media only screen and (min-width: 721px) {
+    .product-container {
+    width: 20%;
+    }
+    }
+  */
+  
+     /*-- Mensaje---------------------------------------------------*/
+  
+     .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 3; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+    
+    /* Modal content */
+    .modal-content {
+      background-color: #fefefe;
+      margin: 30% auto; /* 15% from the top and centered */
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%; /* Could be more or less, depending on screen size */
+    }
+    
+    /* The Close Button */
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  
+    /*-- Encabezado---------------------------------------------------*/
+    
+      /*-----registro-----*/
+    .registro_inicio{
+    width:100%;
+    height:27%;
+    text-align:right;
+    vertical-align:top;
+    word-spacing:2;
+    font: size 15px;
+    background: rgb(235, 235, 235);
+    
+    
+    
+    }
+    
+    .registro_inicio nav{
+        position:relative;
+        width:100%;
+        margin:0 auto;
+    }
+    
+    
+    .registro_inicio ul{
+        margin:0;
+        padding:0;
+        list-style:none;
+        
+    }
+    
+    
+  
+    .registro_inicio nav ul li{
+    
+        display:inline;
+        vertical-align:top;
+        width:5%;
+        border-left: 1px solid black;
+        padding-left: 2px;
+        margin-right: 3px;
+        margin-left: 4px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    }
+    
+    .registro_inicio nav ul li a{
+        text-decoration:none;
+        color:rgb(0, 0, 0);
+        
+    }
+    
+    .registro_inicio nav ul li a:hover{
+          color:#a545bd;
+        transition: color .3s;
+    }
+  
+    .icono {
+      display: inline-block;
+      margin-right: 10px; /* distancia entre imagen y texto */
+      }
+  
+      .icono img{
+        
+          width: 15px; /* tamaño de la imagen */
+          height: 15px;
+          margin-top: 1px;
+    
+      }
+  
+      li a span{
+        padding-left: 1px;
+      }
+  /*-----encabezado-----*/
+  
+  
+  .encabezado{
+   
+    width:100%;
+    height: 90%;
+    background:rgb(255, 255, 255);
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(173, 172, 172);
+  
+    }
+    
+    header {
+      height: 9%;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      transition: top 0.3s;
+      transition: all 0.5s ease;
+    }
+    
+  
+    
+    header.hidden {
+      top: -80px;
+    }
+  
+    
+  
+    #logo{
+      width:20%;
+      height:100%;
+      margin: 5px;
+    }
+  
+    #carrocompra{
+      width:50%;
+      height:100%;
+      margin: 5px;
+    }
+  /*-- Menú ---------------------------------------------------*/
+  
+    #encabezadomenu{
+      width:30%;
+      height:100%;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      margin-left: 22%;
+  
+    }
+  
+    #encazadomenu a{
+      color: rgb(0, 0, 0);
+      text-align: center;
+      margin: 0 20px;
+      text-decoration: none;
+    }
+  
+    nav a{
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+    }
+  
+  
+    nav li{
+      display: inline-block;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    }
+  
+    
+    #logo img{
+   margin: 2px;
+   margin-top: 5px;
+    width:90px;
+    height:70px;
+    display:block;
+    float:left;
+    }
+  
+    
+    #carrocompra img{
+    padding:10px;
+    width:30px;
+    height:30px;
+    display:block;
+    float:right;
+    text-align:center;
+    margin-top: 10px;
+    }
+    /*-- Submenú---------------------------------------------------*/
+  
+    #submenu {
+      display: none;
+      width: 100%;
+      height: 400px;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    #encabezadomenu:hover #submenu {
+      display: block;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: rgb(255, 255, 255);
+      padding: 1em;
+      margin-top: 0.7%;
+      border-bottom: 2px solid rgb(173, 172, 172);
+    
+    }
+    
+  .columns {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    justify-content: center;
+    margin: auto;
+    height: 50%;
+    
+  }
+  
+  .column {
+    width: 25%;
+    text-align: center;
+    margin-left: 4%;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    height: 100%;
+   
+  }
+  
+  .enlacescolumnas a {
+    display: block;
+    margin-bottom: 1em;
+    }
+
+
+/*-- CONTENIDO---------------------------------------------------*/
+.content {
+    display: flex;
+    height: 1500px;
+    padding: 150px 0px 0px;
+  }
+    /*-- CONTENIDO IZQUIERDA---------------------------------------*/
+
+  .left-content {
+    width: 73%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .product-container {
+    width: 47.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    margin: 0;
+    margin-left: 0.5px;
+    margin-bottom: 0.5px;
+    margin-top: 0.5px;
+}
+
+.product-container img, video {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    max-height: 100%;
+    height: 100%;
+    object-fit: cover;
+   
+}
+
+.product-container video:hover {
+    animation-play-state: running;
+}
+
+.product-container video {
+    animation-play-state: paused;
+}
+
+    /*-- CONTENIDO DERECHA---------------------------------------*/
+.right-content {
+    width: 25%;
+    height: 100%;
+    position: relative;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    text-align: center;
+    float: left;
+
+}
+
+  .title {
+    margin-top: 4%;
+    margin-bottom: 3%;
+    font-size: 40px;
+    font-weight: bold;
+    display: inline-block;
+    
+  }
+  .description {
+    margin-bottom: 5%;
+    font-size: 20px;
+    margin-top: 5%;
+  }
+
+  .precio {
+    margin-bottom: 5%;
+    font-size: 20px;
+    margin-top: 5%;
+    font-style: italic;
+  }
+
+  .button-imagen-container{
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+    margin-right: 5px;
+    box-shadow: 0px 0px 4px black;
+    
+  }
+
+  .button-imagen-container button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height:50px;
+    cursor: pointer;
+  }
+  .button-imagen-container button img {
+    width: 50px;
+    height:50px;
+    object-fit: cover;
+ 
+    margin: 0;
+  }
+
+  .button-imagen-container button img:hover {
+    border: 2px solid black;
+  }
+
+  .size-buttons {
+    width: 90%;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+    margin-bottom: 5%;
+  
+  }
+
+  .container-size-button {
+    display: inline-block;
+    margin-right: 5px;
+    border: 1px solid grey;
+    
+    
+  }
+
+  .size-buttons button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height:40px;
+    cursor: pointer;
+    float: left;
+    background: transparent;
+  }
+
+  .container-size-button:hover{
+    background-color: rgb(212, 212, 212);
+    border: 1px solid black;
+    
+  }
+
+  .buy-button {
+    width: 70%;
+    height:60px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 15%;
+    margin-right: 5px;
+    background-color: rgb(139, 112, 103);
+    cursor: pointer;
+    font-weight: bold;
+    border: 2px solid black;
+  }
+
+  .buy-button:hover {
+    background-color: transparent;
+    box-shadow: 0px 0px 4px black;
+
+  }
+
+
+  button.toggle-details {
+    background-color: transparent;
+    border: none;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  .details {
+    margin-bottom: 3%;
+    float: left;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-top: 3%;
+    width: 100%;
+  }
+  
+  .details-texto {
+    margin-right: 80px;
+    float: left;
+
+  }
+  
+  .details-button {
+    margin-left: auto;
+    float: right;
+  }
+  
+  .info {
+    margin-bottom: 3%;
+    height: 70px;
+    width: 100%;
+    display: none;
+    
+  }
+  
+  .info.visible {
+    display: block;
+    margin-bottom: 3%;
+    height: 20%;
+    width: 100%;
+    margin-top: 10%;
+    color: black;
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+  .bordetop {
+    width: auto;
+    height: 5%;
+    margin-bottom: 2%;
+    width: 100%;
+    border-bottom: 1px solid gray;
+  }
+
+  .bordebottom {
+    width: auto;
+    height: 4%;
+    margin-bottom: 2%;
+    width: 100%;
+    margin-top: 3%;
+    border-bottom: 1px solid gray;
+  }
+
+
+  .bordebottom.hidden {
+    margin-bottom: 3%;
+    width: 100%;
+    display: none;
+  }
+
+  .bordebottom2 {
+    width: auto;
+    height: 4%;
+    margin-bottom: 2%;
+    width: 100%;
+    margin-top: 3%;
+    border-bottom: 1px solid gray;
+  }
+
+  .info ul {
+    padding-left: 0;
+    list-style-type: circle;
+  }
+  
+  .info li {
+    margin-left: 20px;
+    text-align: left;
+  }
+
+  .info p{
+    margin-top: 3%;
+    text-align: left;
+    font-style: italic;
+
+  }
+
+  .info img{
+    margin-top: 3%;
+    width: 35px;
+    height: 35px;
+  }
+
+
+ 
+
+  
+ 
+  
+  
+
+  /*-- Pie de página ---------------------------------------------------*/
+
+
+
+#columnas{
+    column-count:3;
+     column-gap:30px;
+    }
+    
+    footer {
+      background-color: rgb(255, 255, 255);
+      color: rgb(7, 7, 7);
+      padding: 1em;
+      margin-top: 1%;
+      border-top: 2px solid grey;
+    }
+    
+    .piedepagina {
+      display: flex;
+      justify-content: space-between;
+      
+    }
+    
+    .col {
+      width: 33%;
+      text-align: left;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      
+    }
+    
+    .col a{
+      text-decoration: none;
+      color: black;
+     
+    }
+    
+    .social-icons img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+    

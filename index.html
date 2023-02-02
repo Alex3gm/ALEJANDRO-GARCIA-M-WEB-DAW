@@ -1,0 +1,468 @@
+<html>
+   <head>
+            <title>SHADOW PROJECT | Project Web by Alejandro Garcia </title>
+
+            <link href="css.css" rel="stylesheet" type="text/css" />
+			<script src="scriptcarrouselimg.js"></script>
+			<script src="scriptsize.js"></script>
+   </head>
+
+<body>
+
+
+
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+		  <span class="close">&times;</span>
+		  <h2>Pagina en construcción.</h2>
+		  		<span class="icono">
+				<img src="imagenes/construccion.png">
+		  		</span>
+			<p>Puedes navegar por la página mediante los siguientes vinculos(De arriba hacia abajo)</p>
+			<p><strong>Creador:</strong> Pagina de informacion del Creador</p>
+			<p><strong>Inicio Sesion:</strong> Pagina de inicio o registro de Sesion</p>
+			<p><strong>Logo:</strong> Clickando en el, vuelves al inicio de la pagina web</p>
+			<p><strong>Hombre:</strong> Clickando te lleva a pagina de articulos de hombres</p>
+		</div>
+	  </div>
+
+	  <script>
+		// Get the modal
+		var modal = document.getElementById("myModal");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the page loads, show the modal
+window.onload = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+	  </script>
+
+<header>
+
+	<section>
+
+
+		<div class="registro_inicio">
+	
+			<nav>
+	
+				<ul>
+
+					<li>
+						
+						<a href="login.html">
+							<span class="icono">
+								<img src="imagenes/account.png">
+							  </span>
+						<span class="texto">Cuenta</span>
+						 </a>
+						 </li>
+	
+					<li>
+						<a href="creada.html">
+						<span class="texto">Creador</span>
+						 </a>
+						 </li>
+
+					<li>
+					<a href="login.html">
+						
+					<span class="login">Iniciar Sesión</span>
+					 </a>
+					 </li>
+					 
+	
+				
+				</ul>
+	
+			</nav>
+	
+		</div>
+
+	
+	</section>
+
+	   <div class="encabezado" style="text-align:center">
+
+		<div id="logo">
+			<a href="index.html"><img src="imagenes/LOGOO.png"  /></a>
+		
+		</div>
+
+		<div id="encabezadomenu">
+			<nav>
+			  <ul>
+				<li style="display: inline-block; margin-right: 1em;">
+				  <a href="articulohombre.html">
+					<span class="borde"></span>
+					<span class="texto">HOMBRE</span>
+				  </a>
+				  <div id="submenu">
+					<div class="columns">
+						<div class="column">
+						  <p><strong>COLECCIONES</strong></p>
+						  <div class="enlacescolumnas">
+						  <a href="#">Enlace 2</a>
+						  <a href="#">Enlace 3</a>
+						</div>
+					</div>
+						<div class="column">
+							<p><strong>ROPA</strong></p>
+							<div class="enlacescolumnas">
+								<a href="#">Camisetas</a>
+								<a href="#">Hoodies</a>
+								<a href="#">Shorts</a>
+								<a href="#">Joggers</a>
+								<a href="#">Vaqueros</a>
+								<a href="#">Complementos</a>
+								<a href="#">Chaquetas y abrigos</a>
+							  </div>
+						</div>
+						<div class="column">
+							<p><strong>CALZADO</strong></p>
+							<div class="enlacescolumnas">
+								<a href="#">Enlace 2</a>
+								<a href="#">Enlace 3</a>
+								<a href="#">Enlace 3</a>
+								<a href="#">Enlace 3</a>
+							  </div>
+						</div>
+						<div class="column">
+							<p><strong>DEPORTE</strong></p>
+							<div class="enlacescolumnas">
+								<a href="#">Enlace 2</a>
+								<a href="#">Enlace 3</a>
+								<a href="#">Enlace 3</a>
+								<a href="#">Enlace 3</a>
+							  </div>
+						</div>
+				  </div>
+				  </div>
+				</li>
+				<li style="display: inline-block; margin-right: 1em;">
+				  <a href="#">
+					<span class="borde"></span>
+					<span class="texto">MUJER</span>
+				  </a>
+				</li>
+				<li style="display: inline-block;">
+				  <a href="#">
+					<span class="borde"></span>
+					<span class="texto">OTROS</span>
+				  </a>
+				</li>
+			  </ul>
+			</nav>
+		  </div>
+
+		  <script>
+				const hombreLink = document.querySelector("#encabezadomenu li:first-child a");
+				const submenu = document.querySelector("#submenu");
+
+				hombreLink.addEventListener("mouseenter", function() {
+			  	submenu.style.display = "block";
+				});
+
+				hombreLink.addEventListener("mouseleave", function() {
+			  	submenu.style.display = "none";
+				});
+			</script>
+
+		<div id="carrocompra">
+	
+			<a href="#"><img src="imagenes/bag.png"  /></a>
+			<a href="#"><img src="imagenes/megusta.png" /></a>
+		</div>
+
+	</div>
+
+	<script> // ocultar header
+		var header = document.getElementById("header");
+		var headerTop = header.offsetTop;
+
+		// Hide the header when it reaches a certain point on the page
+		window.onscroll = function() {
+  			if (window.pageYOffset > headerTop) {
+   			 	header.classList.add("header-hidden");
+  			} else {
+   				 header.classList.remove("header-hidden");
+  			}
+		};
+
+			// Add a hover effect to the header
+			header.onmouseover = function() {
+  			header.classList.add("header-hover");
+			};
+			header.onmouseout = function() {
+  			header.classList.remove("header-hover");
+			};
+		
+	</script>
+		
+
+</header>
+
+
+<section>
+
+	<div class="divvideo">
+		<div class="video-container">
+			
+			<video src="imagenes/video2.mp4" autoplay loop controls ></video>
+			<button onclick="window.location.href='index.html'" id="video-button">YA DISPONIBLE</button>
+		  </div>
+
+	</div>
+
+	<div class="Titulo">
+		<p id="tituloimagen2"> HOMBRE<p>
+		<p id="subtituloimagen2">NUEVA COLECCIÓN</p>
+	</div>
+
+	<div class="divpadre">
+		
+		<div class="seccionproductos">
+			<div class="product-container">
+				<a href="#">
+				<img src="imagenes/pantalon.webp" class="active">
+					<div id="productodescripcion">
+						<p class="product-name">Pantalon NIKE</p>
+						<p class="product-description">Pantalon Jogger color negro. 100% algodon</p>
+						<p class="product-price">$50</p>
+					</div>
+				</a>
+			  </div>
+
+		  <div class="product-container">
+			<a href="#">
+			<img src="imagenes/chandal12.jpg" class="active">
+			<div id="productodescripcion">
+				<p class="product-name">Chaqueta ADIDAS DAW</p>
+				<p class="product-description">Chaqueta con cremallera</p>
+				<p class="product-price">$50</p>
+			</div>
+			</a>
+		  </div>
+
+		  <div class="product-container">
+			<a href="#">
+			<img src="imagenes/pantalon12b.webp" class="active">
+			<div id="productodescripcion">
+				<p class="product-name">Pantalón ADIDAS Da Vinci </p>
+				<p class="product-description">Pantalón Sportwear</p>
+				<p class="product-price">$50</p>
+			</div>
+			</a>
+		  </div>
+
+		  <div class="product-container">
+			<a href="#">
+			<img src="imagenes/sudadera1a.webp" class="active">
+			<div id="productodescripcion">
+				<p class="product-name">Susadera ADIDAS básica</p>
+				<p class="product-description">Sudadera negra. 100% algodon</p>
+				<p class="product-price">$50</p>
+			</div>
+			</a>
+		  </div>
+		</div>
+	</div>
+
+<div class="divpadre2">
+
+	<div class="divimagen">
+		<div class="imagen-container">
+			<img src="imagenes/imagengrande1.webp">
+			<p id="tituloimagen">DESCUBRE LOS BESTSELLES EN GYM</p>
+			<p id="subtituloimagen">They’re called bestsellers for a reason.</p>
+			<button onclick="window.location.href='index.html'" id="imagen-button">COMPRA YA</button>
+		</div>
+	</div>
+
+</div>
+
+<div class="Titulo">
+	<p id="tituloimagen2"> MUJER<p>
+	<p id="subtituloimagen2">REBAJAS DE INVIERNO</p>
+</div>
+
+<div class="divpadre">
+		
+	<div class="seccionproductos">
+	<div class="product-container">
+		<a href="#">
+		<img src="imagenes/sudaderaw1a.webp" class="active">
+			<div id="productodescripcion">
+				<p class="product-name">Sudadera ADIDAS</p>
+				<p class="product-description">Sudadera de mujer color negro. 100% algodon</p>
+				<p class="product-price">$50</p>
+			</div>
+		</a>
+	  </div>
+
+	  <div class="product-container">
+		<a href="#">
+		<img src="imagenes/pantalonw1a.webp" class="active">
+		<div id="productodescripcion">
+			<p class="product-name">Pantalon ADIDAS DAW</p>
+			<p class="product-description">Chaqueta con cremallera</p>
+			<p class="product-price">$50</p>
+		</div>
+		</a>
+	  </div>
+
+	  <div class="product-container">
+		<a href="#">
+		<img src="imagenes/chaquetaw1a.webp" class="active">
+		<div id="productodescripcion">
+			<p class="product-name">Chaqueta Terrez MY SHELTER </p>
+			<p class="product-description">Chaqueta Sportwear Mujer </p>
+			<p class="product-price">$50</p>
+		</div>
+		</a>
+	  </div>
+
+	  <div class="product-container">
+		<a href="#">
+		<img src="imagenes/sudaderaw1b.webp" class="active">
+		<div id="productodescripcion">
+			<p class="product-name">Sudadera NIKE básica</p>
+			<p class="product-description">Sudadera negra. 100% algodon</p>
+			<p class="product-price">$50</p>
+		</div>
+		</a>
+	  </div>
+	</div>
+</div>
+
+<div class="divpadre2">
+
+	<div class="divimagen">
+		<div class="imagen-container">
+			<img src="imagenes/imagengrande2.webp">
+			<p id="tituloimagen">LO MAS VENDIDO EN ROPA DE INVIERNO</p>
+			<p id="subtituloimagen">Descuentos de hasta el 30%</p>
+			<button onclick="window.location.href='index.html'" id="imagen-button">COMPRA YA</button>
+		</div>
+	</div>
+
+</div>
+
+<div class="Titulo">
+	<p id="tituloimagen2">MUJER<p>
+	<p id="subtituloimagen2">SPORTWEAR</p>
+</div>
+
+<div class="divpadre">
+		
+	<div class="seccionproductos">
+	<div class="product-container">
+		<a href="#">
+		<img src="imagenes/sudaderaw1a.webp" class="active">
+			<div id="productodescripcion">
+				<p class="product-name">Sudadera ADIDAS</p>
+				<p class="product-description">Sudadera de mujer color negro. 100% algodon</p>
+				<p class="product-price">$50</p>
+			</div>
+		</a>
+	  </div>
+
+	  <div class="product-container">
+		<a href="#">
+		<img src="imagenes/pantalonw1a.webp" class="active">
+		<div id="productodescripcion">
+			<p class="product-name">Pantalon ADIDAS DAW</p>
+			<p class="product-description">Chaqueta con cremallera</p>
+			<p class="product-price">$50</p>
+		</div>
+		</a>
+	  </div>
+
+	  <div class="product-container">
+		<a href="#">
+		<img src="imagenes/chaquetaw1a.webp" class="active">
+		<div id="productodescripcion">
+			<p class="product-name">Chaqueta Terrez MY SHELTER </p>
+			<p class="product-description">Chaqueta Sportwear Mujer </p>
+			<p class="product-price">$50</p>
+		</div>
+		</a>
+	  </div>
+
+	  <div class="product-container">
+		<a href="#">
+		<img src="imagenes/sudaderaw1b.webp" class="active">
+		<div id="productodescripcion">
+			<p class="product-name">Sudadera NIKE básica</p>
+			<p class="product-description">Sudadera negra. 100% algodon</p>
+			<p class="product-price">$50</p>
+		</div>
+		</a>
+	  </div>
+	</div>
+</div>
+
+
+</section>
+
+<section>
+
+<div class="divpublicidad">
+	<div class="text-container">
+		<p>OBTEN UN 10% DE DESCUENTO POR SER ESTUDIANTE</p>
+	</div>
+	<div class="button-container">
+		<button onclick="window.location.href='index.html'" class="button-container">CONSIGUELO</button>
+		</div>
+	</div>
+</div>
+
+</section>
+
+
+<section>
+
+
+<footer>
+  <div class="piedepagina">
+    <div class="col">
+      <h3>Información de la tienda</h3>
+      <p>Dirección: Calle aaaa Nº82 (02006)</p>
+      <p>Teléfono: 555-555-5555</p>
+      <p>Email: info@tienda.com</p>
+    </div>
+    <div class="col">
+      <h3>Enlaces útiles</h3>
+      <p><a href="#">Política de privacidad</a></p>
+      <p><a href="#">Términos y condiciones</a></p>
+      <p><a href="#">Envíos y devoluciones</a></p>
+    </div>
+    <div class="col">
+      <h3>Síguenos en:</h3>
+      <div class="social-icons">
+        <a href="#"><img src="imagenes/twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="imagenes/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="imagenes/facebook.png" alt="Facebook"></a>
+      </div>
+    </div>
+  </div>
+</footer>
+     
+ </section>
+ 
+ </body>
+</html>

@@ -1,0 +1,60 @@
+<html>
+   <head>
+            <title>LOGIN | SHADOW PROJECT by Alejandro Garcia</title>
+
+            <link href="login.css" rel="stylesheet" type="text/css" />
+           
+   </head>
+
+<body>
+
+
+    <header>
+        <div class="logo-container">
+          <a href="index.html">
+            <a href="index.html"><img src="imagenes/LOGOO.png" class="logo"></a>
+          </a>
+        </div>
+      </header>
+    
+      <div id="container">
+        <div id="login-form">
+          <h1>Inicio de sesión</h1>
+          <form>
+            <input type="text" placeholder="Usuario">
+            <input type="password" placeholder="Contraseña">
+            <button type="submit">Iniciar sesión</button>
+            <p>¿No tienes una cuenta? <a href="#" id="signup-link">Regístrate aquí</a></p>
+          </form>
+        </div>
+        <div id="signup-form" style="display:none;">
+          <h1>Registro</h1>
+          <form>
+            <input type="text" placeholder="Usuario">
+            <input type="email" placeholder="Correo electrónico">
+            <input type="password" placeholder="Contraseña">
+            <input type="password" placeholder="Confirmar contraseña">
+            <button type="submit">Registrarse</button>
+            <p>¿Ya tienes una cuenta? <a href="#" id="login-link">Inicia sesión aquí</a></p>
+          </form>
+        </div>
+      </div>
+      
+      <script>
+        const loginForm = document.getElementById("login-form");
+        const signupForm = document.getElementById("signup-form");
+        const loginLink = document.getElementById("login-link");
+        const signupLink = document.getElementById("signup-link");
+        
+        signupLink.addEventListener("click", () => {
+          loginForm.style.display = "none";
+          signupForm.style.display = "block";
+        });
+        
+        loginLink.addEventListener("click", () => {
+          signupForm.style.display = "none";
+          loginForm.style.display = "block";
+        });
+      </script>
+    </body>
+  </html>

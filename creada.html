@@ -1,0 +1,229 @@
+<html>
+   <head>
+            <title>Alejandro Garcia Macia</title>
+
+            <link href="creada.css" rel="stylesheet" type="text/css" />
+   </head>
+
+<body>
+
+
+
+<section>
+
+   <body>
+
+   
+
+   
+   <header>
+   
+      <section>
+   
+   
+         <div class="registro_inicio">
+      
+            <nav>
+      
+               <ul>
+   
+                  <li>
+                     
+                     <a href="login.html">
+                        <span class="icono">
+                           <img src="imagenes/account.png">
+                          </span>
+                     <span class="texto">Cuenta</span>
+                      </a>
+                      </li>
+      
+                  <li>
+                     <a href="creada.html">
+                     <span class="texto">Creador</span>
+                      </a>
+                      </li>
+   
+                  <li>
+                  <a href="login.html">
+                     
+                  <span class="login">Iniciar Sesión</span>
+                   </a>
+                   </li>
+                   
+      
+               
+               </ul>
+      
+            </nav>
+      
+         </div>
+   
+      
+      </section>
+   
+         <div class="encabezado" style="text-align:center">
+   
+         <div id="logo">
+            <a href="index.html"><img src="imagenes/LOGOO.png"  /></a>
+         
+         </div>
+   
+         <div id="encabezadomenu">
+            <nav>
+              <ul>
+               <li style="display: inline-block; margin-right: 1em;">
+                 <a href="articulohombre.html">
+                  <span class="borde"></span>
+                  <span class="texto">HOMBRE</span>
+                 </a>
+                 <div id="submenu">
+                  <div class="columns">
+                     <div class="column">
+                       <p><strong>COLECCIONES</strong></p>
+                       <div class="enlacescolumnas">
+                       <a href="#">Enlace 2</a>
+                       <a href="#">Enlace 3</a>
+                     </div>
+                  </div>
+                     <div class="column">
+                        <p><strong>ROPA</strong></p>
+                        <div class="enlacescolumnas">
+                           <a href="#">Camisetas</a>
+                           <a href="#">Hoodies</a>
+                           <a href="#">Shorts</a>
+                           <a href="#">Joggers</a>
+                           <a href="#">Vaqueros</a>
+                           <a href="#">Complementos</a>
+                           <a href="#">Chaquetas y abrigos</a>
+                          </div>
+                     </div>
+                     <div class="column">
+                        <p><strong>CALZADO</strong></p>
+                        <div class="enlacescolumnas">
+                           <a href="#">Enlace 2</a>
+                           <a href="#">Enlace 3</a>
+                           <a href="#">Enlace 3</a>
+                           <a href="#">Enlace 3</a>
+                          </div>
+                     </div>
+                     <div class="column">
+                        <p><strong>DEPORTE</strong></p>
+                        <div class="enlacescolumnas">
+                           <a href="#">Enlace 2</a>
+                           <a href="#">Enlace 3</a>
+                           <a href="#">Enlace 3</a>
+                           <a href="#">Enlace 3</a>
+                          </div>
+                     </div>
+                 </div>
+                 </div>
+               </li>
+               <li style="display: inline-block; margin-right: 1em;">
+                 <a href="#">
+                  <span class="borde"></span>
+                  <span class="texto">MUJER</span>
+                 </a>
+               </li>
+               <li style="display: inline-block;">
+                 <a href="#">
+                  <span class="borde"></span>
+                  <span class="texto">OTROS</span>
+                 </a>
+               </li>
+              </ul>
+            </nav>
+           </div>
+   
+           <script>
+               const hombreLink = document.querySelector("#encabezadomenu li:first-child a");
+               const submenu = document.querySelector("#submenu");
+   
+               hombreLink.addEventListener("mouseenter", function() {
+                 submenu.style.display = "block";
+               });
+   
+               hombreLink.addEventListener("mouseleave", function() {
+                 submenu.style.display = "none";
+               });
+            </script>
+   
+         <div id="carrocompra">
+      
+            <a href="#"><img src="imagenes/bag.png"  /></a>
+            <a href="#"><img src="imagenes/megusta.png" /></a>
+         </div>
+   
+      </div>
+   
+      <script> // ocultar header
+         var header = document.getElementById("header");
+         var headerTop = header.offsetTop;
+   
+         // Hide the header when it reaches a certain point on the page
+         window.onscroll = function() {
+              if (window.pageYOffset > headerTop) {
+                   header.classList.add("header-hidden");
+              } else {
+                   header.classList.remove("header-hidden");
+              }
+         };
+   
+            // Add a hover effect to the header
+            header.onmouseover = function() {
+              header.classList.add("header-hover");
+            };
+            header.onmouseout = function() {
+              header.classList.remove("header-hover");
+            };
+         
+      </script>
+         
+   
+   </header>
+
+   <section>
+      <div id="contenido">
+         <div class="informacion">
+           <p><strong>Nombre:</strong> Alejandro</p>
+           <p><strong>Apellidos:</strong> Garcia Macia</p>
+           <p><strong>Correo:</strong> agarciam217@educastillalamancha.es</p>
+           <p></strong>Curso:<strong> 1º DAW</p>
+           <p><strong>Instituto:</strong> Leonardo Da Vinci</p>
+           <p><strong>Versión:</strong> 1.1</p>
+         </div>
+         <iframe id="video" src="https://www.youtube.com/embed/OAr1w8ZnROk?t=2054"; autoplay; encrypted-media; allowfullscreen></iframe>
+       </div>
+   </section>
+
+   <section>
+
+
+      <footer>
+        <div class="piedepagina">
+          <div class="col">
+            <h3>Información de la tienda</h3>
+            <p>Dirección: Calle aaaa Nº82 (02006)</p>
+            <p>Teléfono: 555-555-5555</p>
+            <p>Email: info@tienda.com</p>
+          </div>
+          <div class="col">
+            <h3>Enlaces útiles</h3>
+            <p><a href="#">Política de privacidad</a></p>
+            <p><a href="#">Términos y condiciones</a></p>
+            <p><a href="#">Envíos y devoluciones</a></p>
+          </div>
+          <div class="col">
+            <h3>Síguenos en:</h3>
+            <div class="social-icons">
+              <a href="#"><img src="imagenes/twitter.png" alt="Twitter"></a>
+              <a href="#"><img src="imagenes/instagram.png" alt="Instagram"></a>
+              <a href="#"><img src="imagenes/facebook.png" alt="Facebook"></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+           
+       </section>
+       
+       </body>
+      </html>

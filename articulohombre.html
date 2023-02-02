@@ -1,0 +1,426 @@
+
+<html>
+    <head>
+             <title>HOMBRE PANTALONES | SHADOW PROJECT By Alejandro Garcia</title>
+ 
+             <link href="hombrearticulocss.css" rel="stylesheet" type="text/css" />
+             <script src="scriptsize.js"></script>
+             <script src="scriptcarrouselimg.js"></script>
+    </head>
+ 
+ <body>
+
+    <div id="myModal" class="modal">
+		<div class="modal-content">
+		  <span class="close">&times;</span>
+		  <h2>Pagina en construcción.</h2>
+		  		<span class="icono">
+				<img src="imagenes/construccion.png">
+		  		</span>
+			<p>Puedes navegar por la página mediante los siguientes vinculos(De arriba hacia abajo)</p>
+			<p><strong>Creador:</strong> Pagina de informacion del Creador</p>
+			<p><strong>Inicio Sesion:</strong> Pagina de inicio o registro de Sesion</p>
+			<p><strong>Logo:</strong> Clickando en el, vuelves al inicio de la pagina web</p>
+			<p><strong>Hombre:</strong> Clickando te lleva a pagina de articulos de hombres</p>
+            <p><strong>Primeros 2 productos:</strong> Clickando sobre ellos te llevara a la pagina de compra respectiva</p>
+        
+		</div>
+	  </div>
+
+	  <script>
+		// Get the modal
+		var modal = document.getElementById("myModal");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the page loads, show the modal
+window.onload = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+	  </script>
+ 
+ <section>
+ 
+    <header>
+
+        <section>
+    
+        
+    
+            <div class="registro_inicio">
+        
+                <nav>
+        
+                    <ul>
+    
+                        <li>
+                            
+                            <a href="login.html">
+                                <span class="icono">
+                                    <img src="imagenes/account.png">
+                                  </span>
+                            <span class="texto">Cuenta</span>
+                             </a>
+                             </li>
+        
+                        <li>
+                            <a href="creada.html">
+                            <span class="texto">Creador</span>
+                             </a>
+                             </li>
+    
+                        <li>
+                        <a href="login.html">
+                            
+                        <span class="login">Iniciar Sesión</span>
+                         </a>
+                         </li>
+                         
+        
+                    
+                    </ul>
+        
+                </nav>
+        
+            </div>
+    
+        
+        </section>
+    
+           <div class="encabezado" style="text-align:center">
+    
+            <div id="logo">
+                <a href="index.html"><img src="imagenes/LOGOO.png"  /></a>
+            
+            </div>
+    
+            <div id="encabezadomenu">
+                <nav>
+                  <ul>
+                    <li style="display: inline-block; margin-right: 1em;">
+                      <a href="articulohombre.html">
+                        <span class="borde"></span>
+                        <span class="texto">HOMBRE</span>
+                      </a>
+                      <div id="submenu">
+                        <div class="columns">
+                            <div class="column">
+                              <p><strong>COLECCIONES</strong></p>
+                              <div class="enlacescolumnas">
+                              <a href="#">Enlace 2</a>
+                              <a href="#">Enlace 3</a>
+                            </div>
+                        </div>
+                            <div class="column">
+                                <p><strong>ROPA</strong></p>
+                                <div class="enlacescolumnas">
+                                    <a href="#">Camisetas</a>
+                                    <a href="#">Hoodies</a>
+                                    <a href="#">Shorts</a>
+                                    <a href="#">Joggers</a>
+                                    <a href="#">Vaqueros</a>
+                                    <a href="#">Complementos</a>
+                                    <a href="#">Chaquetas y abrigos</a>
+                                  </div>
+                            </div>
+                            <div class="column">
+                                <p><strong>CALZADO</strong></p>
+                                <div class="enlacescolumnas">
+                                    <a href="#">Enlace 2</a>
+                                    <a href="#">Enlace 3</a>
+                                    <a href="#">Enlace 3</a>
+                                    <a href="#">Enlace 3</a>
+                                  </div>
+                            </div>
+                            <div class="column">
+                                <p><strong>DEPORTE</strong></p>
+                                <div class="enlacescolumnas">
+                                    <a href="#">Enlace 2</a>
+                                    <a href="#">Enlace 3</a>
+                                    <a href="#">Enlace 3</a>
+                                    <a href="#">Enlace 3</a>
+                                  </div>
+                            </div>
+                      </div>
+                      </div>
+                    </li>
+                    <li style="display: inline-block; margin-right: 1em;">
+                      <a href="#">
+                        <span class="borde"></span>
+                        <span class="texto">MUJER</span>
+                      </a>
+                    </li>
+                    <li style="display: inline-block;">
+                      <a href="#">
+                        <span class="borde"></span>
+                        <span class="texto">OTROS</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+    
+              <script>
+                    const hombreLink = document.querySelector("#encabezadomenu li:first-child a");
+                    const submenu = document.querySelector("#submenu");
+    
+                    hombreLink.addEventListener("mouseenter", function() {
+                      submenu.style.display = "block";
+                    });
+    
+                    hombreLink.addEventListener("mouseleave", function() {
+                      submenu.style.display = "none";
+                    });
+                </script>
+    
+            <div id="carrocompra">
+        
+                <a href="#"><img src="imagenes/bag.png"  /></a>
+                <a href="#"><img src="imagenes/megusta.png" /></a>
+            </div>
+    
+        </div>
+    
+    </header>
+    
+ </section>
+    
+ 
+ <section>
+  
+    <div class="seccion">
+        <p class="tituloseccion">HOMBRES</p>
+    </div>
+    
+    <div class="seccionruta">
+            <a href="index.html">Inicio</a>
+            <p>></p>
+            <a href="#">Hombre</a>
+            <p>></p>
+            <a href="#">Ropa</a>
+            <p>></p>
+            <a href="articulohombre.html">Pantalones</a>
+    </div>
+
+    <div class="container">
+        
+    <div class="filter-section">
+      <h3>Filtrar por:</h3>
+      <form>
+        <input type="checkbox" id="category1">
+        <label for="category1">Categoría 1</label><br>
+        <input type="checkbox" id="category2">
+        <label for="category2">Categoría 2</label><br>
+        <input type="checkbox" id="category2">
+        <label for="category2">Categoría 2</label><br>
+        <input type="checkbox" id="category2">
+        <label for="category2">Categoría 2</label><br>
+        <input type="checkbox" id="category2">
+        <label for="category2">Categoría 2</label><br>
+        <input type="checkbox" id="category2">
+        <label for="category2">Categoría 2</label><br>
+        <input type="checkbox" id="category2">
+        <label for="category2">Categoría 2</label><br>
+        <input type="checkbox" id="category2">
+        <label for="category2">Categoría 2</label><br>
+       
+      </form>
+    </div>
+
+  <div class="product-grid">
+    <div class="product-container">
+        <a href="SudaderaNUDEPROJECTMARRON.html">
+            <img src="imagenes/sudaderaw2b.webp" class="active">
+            <div id="productodescripcion">
+                <p class="product-name">Sudadera NUDE PROJECT </p>
+                <p class="product-description">Sudadera Marron </p>
+                <p class="product-price">$40</p>
+            </div>
+            </a>
+    </div>
+    <div class="product-container">
+        <a href="PantalonADIDASDAWNEGRO.html">
+            <img src="imagenes/pantalon12b.webp" class="active">
+            <div id="productodescripcion">
+                <p class="product-name">Chaqueta Terrez MY SHELTER </p>
+                <p class="product-description">Chaqueta Sportwear Mujer </p>
+                <p class="product-price">$50</p>
+            </div>
+            </a>
+    </div>
+
+    <div class="product-container">
+        <a href="#">
+            <img src="imagenes/pantalonizq.webp" class="active">
+            <div id="productodescripcion">
+                <p class="product-name">Chaqueta Terrez MY SHELTER </p>
+                <p class="product-description">Chaqueta Sportwear Mujer </p>
+                <p class="product-price">$50</p>
+            </div>
+            </a>
+    </div>
+
+    <div class="product-container">
+        <a href="#">
+            <img src="imagenes/pantalonh1a.webp" class="active">
+            <div id="productodescripcion">
+                <p class="product-name">Pantalon Ultimate365 Tapered </p>
+                <p class="product-description">Pantalon Adidas negro </p>
+                <p class="product-price">$70</p>
+            </div>
+            </a>
+    </div>
+
+    <div class="product-container">
+        <a href="#">
+            <img src="imagenes/pantalonh1a.webp" class="active">
+            <div id="productodescripcion">
+                <p class="product-name">Pantalon Ultimate365 Tapered </p>
+                <p class="product-description">Pantalon Adidas negro </p>
+                <p class="product-price">$70</p>
+            </div>
+            </a>
+    </div>
+
+     <div class="product-container">
+        <a href="#">
+            <img src="imagenes/pantalonh1a.webp" class="active">
+            <div id="productodescripcion">
+                <p class="product-name">Pantalon Ultimate365 Tapered </p>
+                <p class="product-description">Pantalon Adidas negro </p>
+                <p class="product-price">$70</p>
+            </div>
+            </a>
+    </div>
+
+
+    <div class="product-container">
+        <a href="#">
+            <img src="imagenes/pantalonh1a.webp" class="active">
+            <div id="productodescripcion">
+                <p class="product-name">Pantalon Ultimate365 Tapered </p>
+                <p class="product-description">Pantalon Adidas negro </p>
+                <p class="product-price">$70</p>
+            </div>
+            </a>
+    </div>
+
+    <div class="product-container">
+        <a href="#">
+            <img src="imagenes/pantalonh1a.webp" class="active">
+            <div id="productodescripcion">
+                <p class="product-name">Pantalon Ultimate365 Tapered </p>
+                <p class="product-description">Pantalon Adidas negro </p>
+                <p class="product-price">$70</p>
+            </div>
+            </a>
+    </div>
+
+     <div class="product-container">
+        <a href="#">
+            <img src="imagenes/pantalonh1a.webp" class="active">
+            <div id="productodescripcion">
+                <p class="product-name">Pantalon Ultimate365 Tapered </p>
+                <p class="product-description">Pantalon Adidas negro </p>
+                <p class="product-price">$70</p>
+            </div>
+            </a>
+    </div>
+
+       <div class="product-container">
+        <a href="#">
+            <img src="imagenes/pantalonh1a.webp" class="active">
+            <div id="productodescripcion">
+                <p class="product-name">Pantalon Ultimate365 Tapered </p>
+                <p class="product-description">Pantalon Adidas negro </p>
+                <p class="product-price">$70</p>
+            </div>
+            </a>
+    </div>
+
+    <div class="product-container">
+        <a href="#">
+            <img src="imagenes/pantalonh1a.webp" class="active">
+            <div id="productodescripcion">
+                <p class="product-name">Pantalon Ultimate365 Tapered </p>
+                <p class="product-description">Pantalon Adidas negro </p>
+                <p class="product-price">$70</p>
+            </div>
+            </a>
+    </div>
+
+     <div class="product-container">
+        <a href="#">
+            <img src="imagenes/pantalonh1a.webp" class="active">
+            <div id="productodescripcion">
+                <p class="product-name">Pantalon Ultimate365 Tapered </p>
+                <p class="product-description">Pantalon Adidas negro </p>
+                <p class="product-price">$70</p>
+            </div>
+            </a>
+    </div>
+
+    <div class="product-container">
+        <a href="#">
+            <img src="imagenes/pantalonh1a.webp" class="active">
+            <div id="productodescripcion">
+                <p class="product-name">Pantalon Ultimate365 Tapered </p>
+                <p class="product-description">Pantalon Adidas negro </p>
+                <p class="product-price">$70</p>
+            </div>
+            </a>
+    </div>
+
+
+</div>
+        
+   
+ 
+</section>
+
+  <section>
+
+
+    <footer>
+            <div class="piedepagina">
+             <div class="col">
+                 <h3>Información de la tienda</h3>
+                <p>Dirección: Calle aaaa Nº82 (02006)</p>
+                 <p>Teléfono: 555-555-5555</p>
+                 <p>Email: info@tienda.com</p>
+                </div>
+                <div class="col">
+                <h3>Enlaces útiles</h3>
+                <p><a href="#">Política de privacidad</a></p>
+              <p><a href="#">Términos y condiciones</a></p>
+                <p><a href="#">Envíos y devoluciones</a></p>
+                </div>
+                <div class="col">
+                <h3>Síguenos en:</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="imagenes/twitter.png" alt="Twitter"></a>
+                    <a href="#"><img src="imagenes/instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="imagenes/facebook.png" alt="Facebook"></a>
+                </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+     
+ </body>
+
+
+</html>

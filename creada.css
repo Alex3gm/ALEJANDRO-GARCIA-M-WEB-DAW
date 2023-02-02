@@ -1,0 +1,342 @@
+body{ background:white;
+    margin:0;
+    padding: 0
+  }
+   
+  
+  
+    /*-- Encabezado---------------------------------------------------*/
+    
+      /*-----registro-----*/
+    .registro_inicio{
+    width:100%;
+    height:27%;
+    text-align:right;
+    vertical-align:top;
+    word-spacing:2;
+    font: size 15px;
+    background: rgb(235, 235, 235);
+    
+    
+    
+    }
+    
+    .registro_inicio nav{
+        position:relative;
+        width:100%;
+        margin:0 auto;
+    }
+    
+    
+    .registro_inicio ul{
+        margin:0;
+        padding:0;
+        list-style:none;
+        
+    }
+    
+    
+  
+    .registro_inicio nav ul li{
+    
+        display:inline;
+        vertical-align:top;
+        width:5%;
+        border-left: 1px solid black;
+        padding-left: 2px;
+        margin-right: 3px;
+        margin-left: 4px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    }
+    
+    .registro_inicio nav ul li a{
+        text-decoration:none;
+        color:rgb(0, 0, 0);
+        
+    }
+    
+    .registro_inicio nav ul li a:hover{
+          color:#a545bd;
+        transition: color .3s;
+    }
+  
+    .icono {
+      display: inline-block;
+      margin-right: 10px; /* distancia entre imagen y texto */
+      }
+  
+      .icono img{
+        
+          width: 15px; /* tamaño de la imagen */
+          height: 15px;
+          margin-top: 1px;
+    
+      }
+  
+      li a span{
+        padding-left: 1px;
+      }
+  /*-----encabezado-----*/
+  
+  
+  .encabezado{
+   
+    width:100%;
+    height: 90%;
+    background:rgb(255, 255, 255);
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(173, 172, 172);
+  
+    }
+    
+    header {
+      height: 9%;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      transition: top 0.3s;
+      transition: all 0.5s ease;
+    }
+    
+  
+    
+    header.hidden {
+      top: -80px;
+    }
+  
+    
+  
+    #logo{
+      width:20%;
+      height:100%;
+      margin: 5px;
+    }
+  
+    #carrocompra{
+      width:50%;
+      height:100%;
+      margin: 5px;
+    }
+  /*-- Menú ---------------------------------------------------*/
+  
+    #encabezadomenu{
+      width:30%;
+      height:100%;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      margin-left: 22%;
+  
+    }
+  
+    #encazadomenu a{
+      color: rgb(0, 0, 0);
+      text-align: center;
+      margin: 0 20px;
+      text-decoration: none;
+    }
+  
+    nav a{
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+    }
+  
+  
+    nav li{
+      display: inline-block;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    }
+  
+    
+    #logo img{
+   margin: 2px;
+   margin-top: 5px;
+    width:90px;
+    height:70px;
+    display:block;
+    float:left;
+    }
+  
+    
+    #carrocompra img{
+    padding:10px;
+    width:30px;
+    height:30px;
+    display:block;
+    float:right;
+    text-align:center;
+    margin-top: 10px;
+    }
+    /*-- Submenú---------------------------------------------------*/
+  
+    #submenu {
+      display: none;
+      width: 100%;
+      height: 400px;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    #encabezadomenu:hover #submenu {
+      display: block;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: rgb(255, 255, 255);
+      padding: 1em;
+      margin-top: 0.7%;
+      border-bottom: 2px solid rgb(173, 172, 172);
+    
+    }
+    
+  .columns {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    justify-content: center;
+    margin: auto;
+    height: 50%;
+    
+  }
+  
+  .column {
+    width: 25%;
+    text-align: center;
+    margin-left: 4%;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    height: 100%;
+   
+  }
+  
+  .enlacescolumnas a {
+    display: block;
+    margin-bottom: 1em;
+    }
+
+    /*-- INFO ------------------------------------------------------------------*/
+
+.divpublicidad {
+    display: flex;
+      width: 85%;
+      height: 15%;
+      background: #c5e928;
+    border-radius: 20px;
+      margin-bottom: 7%;
+      margin-top: 7%;
+      margin-left: 7.5%;
+      margin-right: 7.5%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+  
+  .text-container {
+      width: 60%;
+      text-align: center;
+      float: left;
+      margin: auto;
+      font-weight: bold;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 30px;
+  }
+  
+  .button-container {
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+      background-color: rgb(7, 7, 7);
+      color: #fbfcf8;
+    margin-top: 2%;
+    margin-right: 15%;
+    margin-bottom: 2%;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: bold;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+   /*-- Contenido---------------------------------------------------*/
+   #contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 30%;
+  }
+  
+  .informacion {
+    width: 50%;
+    text-align: center;
+    background-color: rgba(255,255,255,0.6);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1;
+
+  }
+  
+  .informacion p {
+    margin: 10px 0;
+  }
+  
+  #video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+  
+  /*-- Pie de página ---------------------------------------------------*/
+  
+  
+  
+  #columnas{
+  column-count:3;
+   column-gap:30px;
+  }
+  
+  footer {
+    background-color: rgb(255, 255, 255);
+    color: rgb(7, 7, 7);
+    padding: 1em;
+    margin-top: 1%;
+    border-top: 2px solid grey;
+  }
+  
+  .piedepagina {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  
+  .col {
+    width: 33%;
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+  }
+  
+  .col a{
+    text-decoration: none;
+    color: black;
+   
+  }
+  
+  .social-icons img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  

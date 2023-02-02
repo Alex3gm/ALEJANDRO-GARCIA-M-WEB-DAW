@@ -1,0 +1,249 @@
+body{ background:white;
+    margin:0
+    padding:0}
+    
+    
+    /*-- Encabezado---------------------------------------------------*/
+    
+    .registro_inicio{
+    width:100%;
+    height:1%;
+    text-align:right;
+    vertical-align:top;
+    word-spacing:3;
+    font-size:small;
+    
+    
+    }
+    
+    .registro_inicio nav{
+        position:relative;
+        width:100%;
+        margin:0 auto;
+    }
+    
+    
+    .registro_inicio ul{
+        margin:0;
+        padding:0;
+        list-style:none;
+    }
+    
+    .registro_inicio nav ul li{
+    
+        display:inline;
+           vertical-align:top;
+        width:5%;
+    }
+    
+    .registro_inicio nav ul li a{
+        text-decoration:none;
+        color:grey;
+    }
+    
+    .registro_inicio nav ul li a:hover{
+          color:#45BDBD;
+        transition: color .5s;
+    }
+    
+    
+    .encabezado{
+    margin-top:0.5%;
+    width:100%;
+    height:10%;
+    background:black;
+    }
+    
+    .encabezado img{
+    padding:10px;
+    width:110px;
+    height:40px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    float:left;
+    text-align:center;
+    }
+    
+    
+    /*--  menu ---------------------------------------------------*/
+    
+    .cabecera{
+    margin-top:0.2%;
+    width:100%;
+    background:black;
+    }
+    
+    /*header {
+    position:fixed;
+    float:left;
+    
+    }
+    
+    */
+    header .cabecera{
+    width:100%;
+    position:fixed;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    z.index:999px;
+    transition:.2s;
+    
+    
+    
+    }
+    
+    
+    .cabecera nav{
+        position:relative;
+        width:100%;
+        margin:0 auto;
+    }
+    
+    .cabecera nav ul{
+      width:100%;
+        margin:0;
+        //padding:0;
+        list-style:none;
+    }
+    
+    .cabecera nav ul li{
+        position:relative;
+        display:inline-block;
+        //vertical-align:top;
+        width:23%;
+    }
+    
+    
+    .cabecera nav ul li a{
+        text-decoration:none;
+        color:white;
+    }
+    
+    
+    
+    /*.cabecera nav ul li span.borde{
+    width:100%;
+        display:block;
+        height:4px;
+        background-color:white;
+    }
+    */
+    
+    .cabecera nav ul li span.texto{
+    width:100%;
+        display:block;
+        height:30px;
+        line-height:30px;
+        text-align:center;
+        background-color:black;
+    }
+    
+    .cabecera nav ul li:hover{
+    background-color:#F0E968;
+    
+    }
+    
+    .cabecera nav ul li:hover span.borde{
+        background-color:#F0E968;
+    }
+    .cabecera nav ul li:hover a i{
+        color:white;
+    }
+    .cabecera nav ul li:hover a .texto{
+        color:#F0E968;
+        background-color:#232222;
+    }
+    header .cabecera{
+    text-align:center;
+    }
+    
+    /*-- Contenido ---------------------------------------------------*/
+
+
+    .container{
+        margin-top:0.5%;
+    padding:10px 30 px;
+    height:90%;
+    background-color:#BDD2EF ;
+    width:100%;
+    display: flex;
+    }
+
+
+    .artizq{
+        margin-top:0.5%;
+        padding:10px 30 px;
+        background-color:#466a9c ;
+        width:45%;
+        
+    }
+
+    .carousel img {
+
+        margin-left: 10%;
+        margin-top: 6%;
+        width: 45%;
+        height: auto;
+        visibility: hidden;
+      }
+      
+      .carousel img.active {
+        visibility: visible;
+      }
+
+    .artder{
+            margin-top:0.5%;
+            padding:10px 30 px;
+            background-color:#BDD2EF ;
+            width:55%;
+            text-align: center;
+            
+            }
+
+            
+              
+    #size-select {
+                padding: 10px;
+                border-radius: 5px;
+                border: none;
+    }
+            
+    .selected {
+                background-color: #ddd;
+    }
+
+
+    #buy-button{
+        background-color: green;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+
+    /*-- Pie de página ---------------------------------------------------*/
+    .piedepagina{
+        margin-top:0.5%;
+        background:black;
+        padding:10px 30 px;
+        height:23%;
+        clear:both;
+        color:white;
+        
+        display: flex;
+        align-items: center;
+        
+        word-spacing:6;
+        font-size:medium;
+        
+        }
+        
+        #columnas{
+        column-count:3;
+         column-gap:30px;
+        }
+        

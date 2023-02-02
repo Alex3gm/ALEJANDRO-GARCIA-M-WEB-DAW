@@ -1,0 +1,411 @@
+
+body{ background:white;
+  margin:0;
+  padding: 0
+}
+ /*-- Mensaje---------------------------------------------------*/
+
+ .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 3; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 30% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+  /*-- Encabezado---------------------------------------------------*/
+  
+    /*-----registro-----*/
+  .registro_inicio{
+  width:100%;
+  height:27%;
+  text-align:right;
+  vertical-align:top;
+  word-spacing:2;
+  font: size 15px;
+  background: rgb(235, 235, 235);
+  
+  
+  
+  }
+  
+  .registro_inicio nav{
+      position:relative;
+      width:100%;
+      margin:0 auto;
+  }
+  
+  
+  .registro_inicio ul{
+      margin:0;
+      padding:0;
+      list-style:none;
+      
+  }
+  
+  
+
+  .registro_inicio nav ul li{
+  
+      display:inline;
+      vertical-align:top;
+      width:5%;
+      border-left: 1px solid black;
+      padding-left: 2px;
+      margin-right: 3px;
+      margin-left: 4px;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  }
+  
+  .registro_inicio nav ul li a{
+      text-decoration:none;
+      color:rgb(0, 0, 0);
+      
+  }
+  
+  .registro_inicio nav ul li a:hover{
+        color:#a545bd;
+      transition: color .3s;
+  }
+
+  .icono {
+    display: inline-block;
+    margin-right: 10px; /* distancia entre imagen y texto */
+    }
+
+    .icono img{
+      
+        width: 15px; /* tamaño de la imagen */
+        height: 15px;
+        margin-top: 1px;
+  
+    }
+
+    li a span{
+      padding-left: 1px;
+    }
+/*-----encabezado-----*/
+
+
+.encabezado{
+ 
+  width:100%;
+  height: 90%;
+  background:rgb(255, 255, 255);
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(173, 172, 172);
+
+  }
+  
+  header {
+    height: 9%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+  }
+
+  #logo{
+    width:20%;
+    height:100%;
+    margin: 5px;
+  }
+
+  #carrocompra{
+    width:50%;
+    height:100%;
+    margin: 5px;
+  }
+/*-- Menú ---------------------------------------------------*/
+
+  #encabezadomenu{
+    width:30%;
+    height:100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-left: 22%;
+
+  }
+
+  #encazadomenu a{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin: 0 20px;
+    text-decoration: none;
+  }
+
+  nav a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
+
+
+  nav li{
+    display: inline-block;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  }
+
+  
+  #logo img{
+ margin: 2px;
+ margin-top: 5px;
+  width:90px;
+  height:70px;
+  display:block;
+  float:left;
+  }
+
+  
+  #carrocompra img{
+  padding:10px;
+  width:30px;
+  height:30px;
+  display:block;
+  float:right;
+  text-align:center;
+  margin-top: 10px;
+  }
+  /*-- Submenú---------------------------------------------------*/
+
+  #submenu {
+    display: none;
+    width: 100%;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #encabezadomenu:hover #submenu {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    padding: 1em;
+    margin-top: 0.7%;
+    border-bottom: 2px solid rgb(173, 172, 172);
+  
+  }
+  
+.columns {
+  display: flex;
+  justify-content: space-between;
+  width: 25%;
+  justify-content: center;
+  margin: auto;
+  height: 50%;
+  
+}
+
+.column {
+  width: 25%;
+  text-align: center;
+  margin-left: 4%;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+  height: 100%;
+ 
+}
+
+.enlacescolumnas a {
+  display: block;
+  margin-bottom: 1em;
+  }
+    
+    /*-- Contenido ---------------------------------------------------*/
+    
+ 
+  .container{
+    
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height:auto;
+    width: 100%;
+    margin-bottom: 3%;
+  }
+    /*-- SECCION----------------*/
+  .seccion{
+    width: 100%;
+    height: 2%;
+    margin-bottom: 1%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .seccion p{
+    margin-left: 5%;
+    position: relative;
+    margin-top: 10%;
+  }
+
+  .tituloseccion{
+    font-size: 60px;
+    color: black;
+    font-weight: bold;
+    width: auto;
+    
+  }
+
+  .seccionruta{
+    width: 100%;
+    height: 7%;
+    color: black;
+    text-decoration: none;
+    margin-left: 5%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 
+  
+  }
+
+  .seccionruta p{
+    position: relative;
+    color: rgb(63, 62, 62);
+    font-size: 30px;
+    display: inline-block;
+  }
+
+  .seccionruta a{
+    position: relative;
+    color:rgb(146, 146, 146);
+    text-decoration: none;
+    font-size: 20px;
+    display: inline-block;
+  }
+
+/*-- FILTER----------------*/
+    .filter-section {
+        width: 10%;
+        padding: 15px;
+        text-align: center;
+        float: left;
+      }
+      /*-- PRODUCTOS----------------*/
+      .product-grid {
+        margin-top: 1%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 80%;
+       
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        
+      }
+      
+      .product-container {
+        width: 20%;
+        margin: 10px;
+        float:left;
+        margin-left: 2%;
+        box-shadow: 0px 0px 4px #888;
+        height: 40%;
+        margin-bottom: 4%;
+        
+      }
+      
+      .product-container a{
+        text-decoration: none;
+        color: black;
+      }
+      .product-container img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        max-height: 300px;
+      }
+      
+      #productodescripcion {
+      
+      height: 20%;
+      text-align: center;
+      }
+      
+      .product-name {
+        font-weight: bold;
+        font-size: 14px;
+      }
+      
+      .product-price {
+        color: #888;
+        font-size: 12px;
+      }
+      
+
+      
+
+      /*-- Pie de página ---------------------------------------------------*/
+
+
+
+#columnas{
+  column-count:3;
+   column-gap:30px;
+  }
+  
+  footer {
+    background-color: rgb(255, 255, 255);
+    color: rgb(7, 7, 7);
+    padding: 1em;
+    margin-top: 1%;
+    border-top: 2px solid grey;
+  }
+  
+  .piedepagina {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  
+  .col {
+    width: 33%;
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+  }
+  
+  .col a{
+    text-decoration: none;
+    color: black;
+   
+  }
+  
+  .social-icons img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  
