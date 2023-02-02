@@ -60,42 +60,54 @@ window.onclick = function(event) {
     
         
     
-            <div class="registro_inicio">
+          <div class="registro_inicio">
+	
+            <nav>
         
-                <nav>
+              <ul>
+      
+                <li>
+                  <a href="script.html">
+                    <span class="texto">Scritps</span>
+                   </a>
+                 </li>
+      
+                <li>		
+                  <a href="login.html">
+                    <span class="icono">
+                      <img src="imagenes/account.png">
+                      </span>
+                  <span id="output">
+                  </span>
+                  
+                   </a>
+                </li>
         
-                    <ul>
-    
-                        <li>
-                            
-                            <a href="login.html">
-                                <span class="icono">
-                                    <img src="imagenes/account.png">
-                                  </span>
-                            <span class="texto">Cuenta</span>
-                             </a>
-                             </li>
+                <li>
+                  <a href="creada.html">
+                  <span class="texto">Creador</span>
+                   </a>
+                </li>
+      
+                <li>
+                <a href="login.html">
+                  
+                <span class="login">Iniciar Sesión</span>
+                 </a>
+                 </li>
+                 
         
-                        <li>
-                            <a href="creada.html">
-                            <span class="texto">Creador</span>
-                             </a>
-                             </li>
-    
-                        <li>
-                        <a href="login.html">
-                            
-                        <span class="login">Iniciar Sesión</span>
-                         </a>
-                         </li>
-                         
+              
+              </ul>
         
-                    
-                    </ul>
+            </nav>
         
-                </nav>
-        
-            </div>
+          </div>
+      
+          <script>
+              var username = localStorage.getItem("username");
+              document.getElementById("output").innerHTML =username;
+          </script>
     
         
         </section>
