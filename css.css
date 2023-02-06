@@ -88,10 +88,6 @@ body{ background:white;
       
   }
 
-  
-  
-  
-
   .registro_inicio nav ul li{
   
       display:inline;
@@ -160,17 +156,15 @@ body{ background:white;
     left: 0;
     right: 0;
     z-index: 999;
-    transition: top 0.3s;
     transition: all 0.5s ease;
-  }
-  
-
-  
-  header.hidden {
-    top: -80px;
+    transform: translateY(0);
   }
 
   
+    header[style="display:none;"] {
+      transform: translateY(-100%);
+
+      }
 
   #logo{
     width:20%;

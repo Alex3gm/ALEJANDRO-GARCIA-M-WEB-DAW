@@ -98,6 +98,8 @@ window.onclick = function(event) {
 				</ul>
 	
 			</nav>
+
+
 	
 		</div>
 
@@ -203,27 +205,25 @@ window.onclick = function(event) {
 
 	</div>
 
-	<script> // ocultar header
-		var header = document.getElementById("header");
-		var headerTop = header.offsetTop;
+	
 
-		// Hide the header when it reaches a certain point on the page
-		window.onscroll = function() {
-  			if (window.pageYOffset > headerTop) {
-   			 	header.classList.add("header-hidden");
-  			} else {
-   				 header.classList.remove("header-hidden");
-  			}
-		};
+<script>
 
-			// Add a hover effect to the header
-			header.onmouseover = function() {
-  			header.classList.add("header-hover");
-			};
-			header.onmouseout = function() {
-  			header.classList.remove("header-hover");
-			};
-		
+	const header = document.querySelector('header');
+	let lastScroll = 0;
+
+	window.addEventListener('scroll', () => {
+ 	 const scrollPercentage = (window.scrollY / (document.body.offsetHeight - window.innerHeight)) * 100;
+  
+  if (window.scrollY > lastScroll && scrollPercentage >= 40) {
+    header.style.display = 'none';
+  } else if (window.scrollY < lastScroll || scrollPercentage <= 35) {
+    header.style.display = 'block';
+  }
+
+  lastScroll = window.scrollY;
+});
+
 	</script>
 		
 
