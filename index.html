@@ -192,7 +192,7 @@ window.onclick = function(event) {
 			  	submenu.style.display = "block";
 				});
 
-				hombreLink.addEventListener("mouseleave", function() {
+				submenu.addEventListener("mouseleave", function() {
 			  	submenu.style.display = "none";
 				});
 			</script>
@@ -209,21 +209,27 @@ window.onclick = function(event) {
 
 <script>
 
-	const header = document.querySelector('header');
-	let lastScroll = 0;
+const header = document.querySelector('header');
+const headerPosition = header.offsetTop;
+let lastScroll = 0;
+const scrollThreshold = 13;
 
-	window.addEventListener('scroll', () => {
- 	 const scrollPercentage = (window.scrollY / (document.body.offsetHeight - window.innerHeight)) * 100;
-  
-  if (window.scrollY > lastScroll && scrollPercentage >= 40) {
+window.addEventListener('scroll', () => {
+  const currentScroll = window.scrollY;
+
+  if (currentScroll === 0) {
+    header.style.display = 'block';
+    return;
+  }
+
+  if (currentScroll > lastScroll + scrollThreshold) {
     header.style.display = 'none';
-  } else if (window.scrollY < lastScroll || scrollPercentage <= 35) {
+  } else if (currentScroll < lastScroll - scrollThreshold) {
     header.style.display = 'block';
   }
 
-  lastScroll = window.scrollY;
+  lastScroll = currentScroll;
 });
-
 	</script>
 		
 
