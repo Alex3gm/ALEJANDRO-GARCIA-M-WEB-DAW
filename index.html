@@ -439,62 +439,75 @@ window.addEventListener('scroll', () => {
 </section>
 
 <section>
-	<div id="feedContainer"></div>
-	<div id="prevButton" class="arrow-button">&lt;</div>
-  	<div id="nextButton" class="arrow-button">&gt;</div>
-
+	
+		<div id="feedContainer" class="carousel-container">
+			<div id="carouselContainer" class="carousel">
+		
   
-	  <script>
-		fetch('feedrss.xml')
-		  .then(response => response.text())
-		  .then(data => {
-			const parser = new DOMParser();
-			const xmlDoc = parser.parseFromString(data, 'text/xml');
-			const items = xmlDoc.getElementsByTagName('item');
-	  
-			const feedContainer = document.getElementById('feedContainer');
-			const prevButton = document.getElementById('prevButton');
-			const nextButton = document.getElementById('nextButton');
-			const feedItemWidth = 310; // Ancho del contenedor de cada noticia (considerando el margen derecho)
-	  
-			let currentPosition = 0;
-	  
-			for (let i = 0; i < items.length; i++) {
-			  const title = items[i].getElementsByTagName('title')[0]?.textContent || '';
-			  const description = items[i].getElementsByTagName('description')[0]?.textContent || '';
-	  
-			  const entryContainer = document.createElement('div');
-			  entryContainer.classList.add('feedItem');
-	  
-			  const titleElement = document.createElement('h3');
-			  titleElement.textContent = title;
-			  entryContainer.appendChild(titleElement);
-	  
-			  const descriptionElement = document.createElement('p');
-			  descriptionElement.textContent = description;
-			  entryContainer.appendChild(descriptionElement);
-	  
-			  feedContainer.appendChild(entryContainer);
-			}
-	  
-			function moveFeedLeft() {
-			  currentPosition += feedItemWidth;
-			  feedContainer.style.transform = `translateX(${currentPosition}px)`;
-			}
-	  
-			function moveFeedRight() {
-			  currentPosition -= feedItemWidth;
-			  feedContainer.style.transform = `translateX(${currentPosition}px)`;
-			}
-	  
-			prevButton.addEventListener('click', moveFeedLeft);
-			nextButton.addEventListener('click', moveFeedRight);
-		  })
-		  .catch(error => {
-			console.error('Error al obtener el feed:', error);
-		  });
-	  </script>
-	  
+				<script>
+					fetch('feedrss.xml')
+					  .then(response => response.text())
+					  .then(data => {
+						const parser = new DOMParser();
+						const xmlDoc = parser.parseFromString(data, 'text/xml');
+						const items = xmlDoc.getElementsByTagName('item');
+				
+						const carouselContainer = document.getElementById('carouselContainer');
+				
+						for (let i = 0; i < items.length; i++) {
+						  const title = items[i].getElementsByTagName('title')[0]?.textContent || '';
+						  const description = items[i].getElementsByTagName('description')[0]?.textContent || '';
+						  const image = items[i].getElementsByTagName('image')[0]?.textContent || '';
+				
+						  const newsItem = document.createElement('div');
+						  newsItem.classList.add('news-item');
+				
+						  if (image) {
+							const imageElement = document.createElement('img');
+							imageElement.src = image;
+							newsItem.appendChild(imageElement);
+						  }
+				
+						  const titleElement = document.createElement('h3');
+						  titleElement.textContent = title;
+						  newsItem.appendChild(titleElement);
+				
+						  const descriptionElement = document.createElement('p');
+						  descriptionElement.textContent = description;
+						  newsItem.appendChild(descriptionElement);
+				
+						  carouselContainer.appendChild(newsItem);
+						}
+				
+						function startCarousel() {
+						  const carouselItems = carouselContainer.getElementsByClassName('news-item');
+						  const carouselItemsCount = carouselItems.length;
+						  let currentPosition = 0;
+						  const itemWidth = carouselItems[0].offsetWidth;
+				
+						  function slideCarousel() {
+							currentPosition -= itemWidth;
+							carouselContainer.style.transform = `translateX(${currentPosition}px)`;
+				
+							if (currentPosition <= -carouselItemsCount * itemWidth) {
+							  currentPosition = 0;
+							}
+				
+							setTimeout(slideCarousel, 3000);
+						  }
+				
+						  slideCarousel();
+						}
+				
+						startCarousel();
+					  })
+					  .catch(error => {
+						console.error('Error al obtener el feed:', error);
+					  });
+				  </script>
+
+</div>
+</div>
   </section>
   
 
