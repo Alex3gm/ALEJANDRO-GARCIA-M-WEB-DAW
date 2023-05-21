@@ -440,43 +440,61 @@ window.addEventListener('scroll', () => {
 
 <section>
 	<div id="feedContainer"></div>
+	<div id="prevButton" class="arrow-button">&lt;</div>
+  	<div id="nextButton" class="arrow-button">&gt;</div>
+
   
-	<script>
-	  fetch('feedrss.xml')
-		.then(response => response.text())
-		.then(data => {
-		  const parser = new DOMParser();
-		  const xmlDoc = parser.parseFromString(data, 'text/xml'); // Analizar el contenido XML
-		  const items = xmlDoc.getElementsByTagName('item'); // Obtener todas las entradas del feed
-  
-		  // Obtén la referencia al contenedor donde deseas mostrar el contenido del feed
-		  const feedContainer = document.getElementById('feedContainer');
-  
-		  // Construye el contenido del feed y agrega los elementos al contenedor
-		  // Aquí hay un ejemplo básico que muestra solo el título y la descripción de cada entrada del feed
-		  for (let i = 0; i < items.length; i++) {
-			const title = items[i].getElementsByTagName('title')[0].textContent;
-			const description = items[i].getElementsByTagName('description')[0].textContent;
-  
-			// Crea los elementos HTML dinámicamente
-			const entryContainer = document.createElement('div');
-			const titleElement = document.createElement('h3');
-			const descriptionElement = document.createElement('p');
-  
-			// Agrega el contenido a los elementos creados
-			titleElement.textContent = title;
-			descriptionElement.textContent = description;
-  
-			// Agrega los elementos al contenedor
-			entryContainer.appendChild(titleElement);
-			entryContainer.appendChild(descriptionElement);
-			feedContainer.appendChild(entryContainer);
-		  }
-		})
-		.catch(error => {
-		  console.error('Error al obtener el feed:', error);
-		});
-	</script>
+	  <script>
+		fetch('feedrss.xml')
+		  .then(response => response.text())
+		  .then(data => {
+			const parser = new DOMParser();
+			const xmlDoc = parser.parseFromString(data, 'text/xml');
+			const items = xmlDoc.getElementsByTagName('item');
+	  
+			const feedContainer = document.getElementById('feedContainer');
+			const prevButton = document.getElementById('prevButton');
+			const nextButton = document.getElementById('nextButton');
+			const feedItemWidth = 310; // Ancho del contenedor de cada noticia (considerando el margen derecho)
+	  
+			let currentPosition = 0;
+	  
+			for (let i = 0; i < items.length; i++) {
+			  const title = items[i].getElementsByTagName('title')[0]?.textContent || '';
+			  const description = items[i].getElementsByTagName('description')[0]?.textContent || '';
+	  
+			  const entryContainer = document.createElement('div');
+			  entryContainer.classList.add('feedItem');
+	  
+			  const titleElement = document.createElement('h3');
+			  titleElement.textContent = title;
+			  entryContainer.appendChild(titleElement);
+	  
+			  const descriptionElement = document.createElement('p');
+			  descriptionElement.textContent = description;
+			  entryContainer.appendChild(descriptionElement);
+	  
+			  feedContainer.appendChild(entryContainer);
+			}
+	  
+			function moveFeedLeft() {
+			  currentPosition += feedItemWidth;
+			  feedContainer.style.transform = `translateX(${currentPosition}px)`;
+			}
+	  
+			function moveFeedRight() {
+			  currentPosition -= feedItemWidth;
+			  feedContainer.style.transform = `translateX(${currentPosition}px)`;
+			}
+	  
+			prevButton.addEventListener('click', moveFeedLeft);
+			nextButton.addEventListener('click', moveFeedRight);
+		  })
+		  .catch(error => {
+			console.error('Error al obtener el feed:', error);
+		  });
+	  </script>
+	  
   </section>
   
 
