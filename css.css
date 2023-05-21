@@ -562,6 +562,10 @@ height: 20%;
   
 }
 
+#feedContainer::-webkit-scrollbar {
+  width: 8px;
+}
+
 .feedItem {
   flex: 0 0 auto;
   margin-right: 10px;
