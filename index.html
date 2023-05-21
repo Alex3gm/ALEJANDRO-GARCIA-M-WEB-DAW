@@ -442,38 +442,72 @@ window.addEventListener('scroll', () => {
 	
 	<div id="feedContainer"></div>
 		
-<script>
-	fetch('feedrss.xml')
-    .then(response => response.text())
-    .then(data => {
-      const parser = new DOMParser();
-      const xmlDoc = parser.parseFromString(data, 'text/xml');
-      const items = xmlDoc.getElementsByTagName('item');
-
-      const feedContainer = document.getElementById('feedContainer');
-
-      for (let i = 0; i < items.length; i++) {
-        const title = items[i].getElementsByTagName('title')[0]?.textContent || '';
-        const description = items[i].getElementsByTagName('description')[0]?.textContent || '';
-
-        const entryContainer = document.createElement('div');
-        entryContainer.classList.add('feedItem');
-
-        const titleElement = document.createElement('h3');
-        titleElement.textContent = title;
-        entryContainer.appendChild(titleElement);
-
-        const descriptionElement = document.createElement('p');
-        descriptionElement.textContent = description;
-        entryContainer.appendChild(descriptionElement);
-
-        feedContainer.appendChild(entryContainer);
-      }
-    })
-    .catch(error => {
-      console.error('Error al obtener el feed:', error);
-    });
-</script>
+	<script>
+		fetch('feedrss.xml')
+		  .then(response => response.text())
+		  .then(data => {
+			const parser = new DOMParser();
+			const xmlDoc = parser.parseFromString(data, 'text/xml');
+			const items = xmlDoc.getElementsByTagName('item');
+	  
+			const feedContainer = document.getElementById('feedContainer');
+	  
+			for (let i = 0; i < items.length; i++) {
+			  const title = items[i].getElementsByTagName('title')[0]?.textContent || '';
+			  const description = items[i].getElementsByTagName('description')[0]?.textContent || '';
+	  
+			  const entryContainer = document.createElement('div');
+			  entryContainer.classList.add('feedItem');
+	  
+			  const titleElement = document.createElement('h3');
+			  titleElement.textContent = title;
+			  entryContainer.appendChild(titleElement);
+	  
+			  const descriptionElement = document.createElement('p');
+			  descriptionElement.textContent = description;
+			  entryContainer.appendChild(descriptionElement);
+	  
+			  feedContainer.appendChild(entryContainer);
+			}
+	  
+			// Desplazamiento horizontal del contenedor al mover el cursor en los extremos
+			const scrollSpeed = 10;
+			let isMovingLeft = false;
+			let isMovingRight = false;
+	  
+			feedContainer.addEventListener('mousemove', function(event) {
+			  const containerRect = feedContainer.getBoundingClientRect();
+			  const containerWidth = containerRect.width;
+			  const mouseX = event.clientX - containerRect.left;
+	  
+			  if (mouseX < scrollSpeed) {
+				isMovingLeft = true;
+			  } else if (mouseX > containerWidth - scrollSpeed) {
+				isMovingRight = true;
+			  } else {
+				isMovingLeft = false;
+				isMovingRight = false;
+			  }
+			});
+	  
+			feedContainer.addEventListener('mouseleave', function() {
+			  isMovingLeft = false;
+			  isMovingRight = false;
+			});
+	  
+			function scrollContainer() {
+			  const scrollAmount = isMovingLeft ? -scrollSpeed : isMovingRight ? scrollSpeed : 0;
+			  feedContainer.scrollLeft += scrollAmount;
+	  
+			  setTimeout(scrollContainer, 10);
+			}
+	  
+			scrollContainer();
+		  })
+		  .catch(error => {
+			console.error('Error al obtener el feed:', error);
+		  });
+	  </script>
 
   </section>
   
