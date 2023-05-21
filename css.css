@@ -556,11 +556,25 @@ height: 20%;
   width: 100%;
 }
 
+.carousel {
+  display: flex;
+  animation: carouselAnimation 10s infinite;
+}
+
 .feedItem {
   flex: 0 0 auto;
   width: 25%; /* Ajusta el ancho según la cantidad de noticias que desees mostrar en un solo carrusel */
   padding: 10px;
   box-sizing: border-box;
+}
+
+@keyframes carouselAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 
