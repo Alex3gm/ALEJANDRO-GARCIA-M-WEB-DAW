@@ -444,40 +444,46 @@ window.addEventListener('scroll', () => {
   
 		<script>
 	  fetch('feedrss.xml')
-		.then(response => response.text())
-		.then(data => {
-		  const parser = new DOMParser();
-		  const xmlDoc = parser.parseFromString(data, 'text/xml'); // Analizar el contenido XML
-		  const items = xmlDoc.getElementsByTagName('item'); // Obtener todas las entradas del feed
-  
-		  // Obtén la referencia al contenedor donde deseas mostrar el contenido del feed
-		  const feedContainer = document.getElementById('feedContainer');
-  
-		  // Construye el contenido del feed y agrega los elementos al contenedor
-		  // Aquí hay un ejemplo básico que muestra solo el título y la descripción de cada entrada del feed
-		  for (let i = 0; i < items.length; i++) {
-			const title = items[i].getElementsByTagName('title')[0].textContent;
-			const description = items[i].getElementsByTagName('description')[0].textContent;
-  
-			// Crea los elementos HTML dinámicamente
-			const entryContainer = document.createElement('div');
-			const titleElement = document.createElement('h3');
-			const descriptionElement = document.createElement('p');
-  
-			// Agrega el contenido a los elementos creados
-			titleElement.textContent = title;
-			descriptionElement.textContent = description;
-  
-			// Agrega los elementos al contenedor
-			entryContainer.appendChild(titleElement);
-			entryContainer.appendChild(descriptionElement);
-			feedContainer.appendChild(entryContainer);
-		  }
-		})
-		.catch(error => {
-		  console.error('Error al obtener el feed:', error);
-		});
-		
+	.then(response => response.text())
+	.then(data => {
+		const parser = new DOMParser();
+		const xmlDoc = parser.parseFromString(data, 'text/xml'); // Analizar el contenido XML
+		const items = xmlDoc.getElementsByTagName('item'); // Obtener todas las entradas del feed
+
+		// Obtén la referencia al contenedor donde deseas mostrar el contenido del feed
+		const carouselContainer = document.getElementById('carouselContainer');
+
+		// Construye el contenido del feed y agrega los elementos al carrusel
+		for (let i = 0; i < items.length; i++) {
+		const title = items[i].getElementsByTagName('title')[0].textContent;
+		const description = items[i].getElementsByTagName('description')[0].textContent;
+		const image = items[i].getElementsByTagName('image')[0].textContent; // Asumiendo que tienes una etiqueta <image> en el XML con la URL de la imagen
+
+		// Crea los elementos HTML dinámicamente
+		const entryContainer = document.createElement('div');
+		entryContainer.classList.add('feedItem'); // Agrega la clase CSS para el estilo del div de la noticia
+
+		const imageElement = document.createElement('img');
+		imageElement.src = image; // Establece la URL de la imagen
+
+		const titleElement = document.createElement('h3');
+		titleElement.textContent = title;
+
+		const descriptionElement = document.createElement('p');
+		descriptionElement.textContent = description;
+
+		// Agrega los elementos al contenedor
+		entryContainer.appendChild(imageElement);
+		entryContainer.appendChild(titleElement);
+		entryContainer.appendChild(descriptionElement);
+
+		carouselContainer.appendChild(entryContainer);
+		}
+	})
+	.catch(error => {
+		console.error('Error al obtener el feed:', error);
+	});
+
 			</script>
 			</div>
 	</div>
