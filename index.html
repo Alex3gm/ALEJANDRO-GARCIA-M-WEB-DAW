@@ -471,7 +471,8 @@ window.addEventListener('scroll', () => {
 			}
 	  
 			// Desplazamiento horizontal del contenedor al mover el cursor en los extremos
-			const scrollSpeed = 10;
+			const scrollSpeed = 20;
+			const scrollStartThreshold = 50; // Ajusta este valor para controlar el punto de inicio del desplazamiento
 			let isMovingLeft = false;
 			let isMovingRight = false;
 	  
@@ -480,9 +481,9 @@ window.addEventListener('scroll', () => {
 			  const containerWidth = containerRect.width;
 			  const mouseX = event.clientX - containerRect.left;
 	  
-			  if (mouseX < scrollSpeed) {
+			  if (mouseX < scrollStartThreshold) {
 				isMovingLeft = true;
-			  } else if (mouseX > containerWidth - scrollSpeed) {
+			  } else if (mouseX > containerWidth - scrollStartThreshold) {
 				isMovingRight = true;
 			  } else {
 				isMovingLeft = false;
