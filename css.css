@@ -551,22 +551,16 @@ height: 20%;
 /*-- Div feed RSS ---------------------------------------------------*/
 
 #feedContainer {
-  max-width: 75%;
+  max-width: 70%;
 	height: 15%;
   display: flex;
   overflow-x: hidden;
   padding: 10px;
   margin-top: 20px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
   
 }
-
-#feedContainer::-webkit-scrollbar {
-  width: 8px;
-}
-
-
 
 .feedItem {
   flex: 0 0 auto;
