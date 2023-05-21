@@ -550,41 +550,29 @@ height: 20%;
 }
 /*-- Div feed RSS ---------------------------------------------------*/
 
-.carousel-container {
-  width: 100%;
-  overflow: hidden;
-}
-
-.carousel {
+#feedContainer {
   display: flex;
-  transition: transform 0.5s ease;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.news-item {
-  flex: 0 0 auto;
+.entryContainer {
   width: 300px;
   padding: 20px;
-  margin-right: 20px;
-  background-color: #f1f1f1;
-  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  box-sizing: border-box;
 }
 
-.news-item img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-.news-item h3 {
+.title {
   font-size: 18px;
+  font-weight: bold;
   margin-bottom: 10px;
 }
 
-.news-item p {
+.description {
   font-size: 14px;
-  margin-bottom: 0;
 }
-
 
 
 /*-- Pie de página ---------------------------------------------------*/
