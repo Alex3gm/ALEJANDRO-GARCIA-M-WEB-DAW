@@ -551,16 +551,18 @@ height: 20%;
 /*-- Div feed RSS ---------------------------------------------------*/
 
 #feedContainer {
-  max-width: 70%;
-	height: 15%;
+  width: 80%;
+  height: 15%;
   display: flex;
-  overflow-x: hidden;
+  overflow-x: auto;
   padding: 10px;
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
-  
+  position: relative;
 }
+
+
 
 .feedItem {
   flex: 0 0 auto;
@@ -570,6 +572,51 @@ height: 20%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+#feedContainer::before,
+#feedContainer::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+#feedContainer::before {
+  left: 0;
+  background-image: url(/imagenes/flechaizq.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#feedContainer::after {
+  right: 0;
+  background-image: url(/imagenes/felchader.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#feedContainer:hover::before,
+#feedContainer:hover::after {
+  opacity: 0.8;
+}
+
+#feedContainer::before {
+  opacity: 1;
+}
+
+#feedContainer::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+#feedContainer::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
 
 
 /*-- Pie de página ---------------------------------------------------*/
