@@ -551,41 +551,23 @@ height: 20%;
 /*-- Div feed RSS ---------------------------------------------------*/
 
 #feedContainer {
-  width: 85%;
-  height: 15%;
+  max-width: 85%;
+	height: 15%;
   display: flex;
-  overflow-x: auto;
+  overflow-x: hidden;
   padding: 10px;
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
-  position: relative;
+  
 }
 
-.scroll-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 30px;
-  height: 30px;
-  opacity: 0.5;
-  transition: opacity 0.3s ease;
-}
-
-.left-arrow {
-  left: 10px;
-}
-
-.right-arrow {
-  right: 10px;
-}
-
-.left-arrow:hover + .right-arrow {
-  opacity: 0.2;
-}
-
-.right-arrow:hover + .left-arrow {
-  opacity: 0.2;
+.feedItem {
+  flex: 0 0 auto;
+  margin-right: 10px;
+  background-color: #ffffff;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 
