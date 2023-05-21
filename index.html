@@ -444,56 +444,68 @@ window.addEventListener('scroll', () => {
 			<div id="carouselContainer">
 		
   
-			<script>
-				fetch('feedrss.xml')
-				  .then(response => response.text())
-				  .then(data => {
-					const parser = new DOMParser();
-					const xmlDoc = parser.parseFromString(data, 'text/xml'); // Analizar el contenido XML
-					const items = xmlDoc.getElementsByTagName('item'); // Obtener todas las entradas del feed
-			
-					// Obtén la referencia al contenedor donde deseas mostrar el contenido del feed
-					const carouselContainer = document.getElementById('carouselContainer');
-			
-					// Construye el contenido del feed y agrega los elementos al carrusel
-					for (let i = 0; i < items.length; i++) {
-					  const title = items[i].getElementsByTagName('title')[0]?.textContent || '';
-					  const description = items[i].getElementsByTagName('description')[0]?.textContent || '';
-					  const image = items[i].getElementsByTagName('image')[0]?.textContent || ''; // Modificar la etiqueta <image> según corresponda en tu XML
-			
-					  // Crea los elementos HTML dinámicamente
-					  const entryContainer = document.createElement('div');
-					  entryContainer.classList.add('feedItem'); // Agrega la clase CSS para el estilo del div de la noticia
-			
-					  if (image) {
-						const imageElement = document.createElement('img');
-						imageElement.src = image; // Establece la URL de la imagen
-						entryContainer.appendChild(imageElement);
-					  }
-			
-					  const titleElement = document.createElement('h3');
-					  titleElement.textContent = title;
-					  entryContainer.appendChild(titleElement);
-			
-					  const descriptionElement = document.createElement('p');
-					  descriptionElement.textContent = description;
-					  entryContainer.appendChild(descriptionElement);
-			
-					  carouselContainer.appendChild(entryContainer);
-					}
-			
-					// Clonar los elementos del carrusel para obtener un bucle continuo
-					const carouselItems = carouselContainer.getElementsByClassName('feedItem');
-					const carouselItemsCount = carouselItems.length;
-					for (let i = 0; i < carouselItemsCount; i++) {
-					  const clonedItem = carouselItems[i].cloneNode(true);
-					  carouselContainer.appendChild(clonedItem);
-					}
-				  })
-				  .catch(error => {
-					console.error('Error al obtener el feed:', error);
-				  });
-			  </script>
+				<script>
+					fetch('feedrss.xml')
+					  .then(response => response.text())
+					  .then(data => {
+						const parser = new DOMParser();
+						const xmlDoc = parser.parseFromString(data, 'text/xml'); // Analizar el contenido XML
+						const items = xmlDoc.getElementsByTagName('item'); // Obtener todas las entradas del feed
+				
+						// Obtén la referencia al contenedor donde deseas mostrar el contenido del feed
+						const carouselContainer = document.getElementById('carouselContainer');
+				
+						// Construye el contenido del feed y agrega los elementos al carrusel
+						for (let i = 0; i < items.length; i++) {
+						  const title = items[i].getElementsByTagName('title')[0]?.textContent || '';
+						  const description = items[i].getElementsByTagName('description')[0]?.textContent || '';
+						  const image = items[i].getElementsByTagName('image')[0]?.textContent || ''; // Modificar la etiqueta <image> según corresponda en tu XML
+				
+						  // Crea los elementos HTML dinámicamente
+						  const entryContainer = document.createElement('div');
+						  entryContainer.classList.add('feedItem'); // Agrega la clase CSS para el estilo del div de la noticia
+				
+						  if (image) {
+							const imageElement = document.createElement('img');
+							imageElement.src = image; // Establece la URL de la imagen
+							entryContainer.appendChild(imageElement);
+						  }
+				
+						  const titleElement = document.createElement('h3');
+						  titleElement.textContent = title;
+						  entryContainer.appendChild(titleElement);
+				
+						  const descriptionElement = document.createElement('p');
+						  descriptionElement.textContent = description;
+						  entryContainer.appendChild(descriptionElement);
+				
+						  carouselContainer.appendChild(entryContainer);
+						}
+				
+						// Realizar el desplazamiento del carrusel utilizando JavaScript
+						const carouselItems = carouselContainer.getElementsByClassName('feedItem');
+						const carouselItemsCount = carouselItems.length;
+						let currentPosition = 0;
+						const itemWidth = carouselItems[0].offsetWidth; // Obtener el ancho de cada elemento del carrusel
+				
+						function slideCarousel() {
+						  currentPosition -= itemWidth;
+						  carouselContainer.style.transform = `translateX(${currentPosition}px)`;
+				
+						  if (currentPosition <= -carouselItemsCount * itemWidth) {
+							currentPosition = 0;
+						  }
+				
+						  setTimeout(slideCarousel, 3000); // Establecer el tiempo de espera entre desplazamientos (3 segundos en este caso)
+						}
+				
+						// Iniciar el desplazamiento del carrusel
+						slideCarousel();
+					  })
+					  .catch(error => {
+						console.error('Error al obtener el feed:', error);
+					  });
+				  </script>
 
 </div>
 </div>
