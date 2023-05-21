@@ -560,9 +560,10 @@ height: 20%;
 }
 
 .feedItem {
-  width: 300px; /* Ancho del div de la noticia */
-  height: 300px; /* Alto del div de la noticia */
-  margin-right: 20px; /* Espacio entre los divs de las noticias */
+  flex: 0 0 auto;
+  width: 25%; /* Ajusta el ancho según la cantidad de noticias que desees mostrar en un solo carrusel */
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .feedItem img {
@@ -580,7 +581,7 @@ height: 20%;
   }
 }
 
-carousel-container {
+.carousel-container {
   display: flex;
   overflow: hidden;
   animation: slide-in 20s infinite linear;
@@ -588,7 +589,7 @@ carousel-container {
 
 @keyframes slide-in {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0);
   }
   100% {
     transform: translateX(-100%);
