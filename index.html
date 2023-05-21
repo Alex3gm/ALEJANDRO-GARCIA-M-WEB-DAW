@@ -69,7 +69,9 @@ window.onclick = function(event) {
 						 </a>
 					 </li>
 
-					<li>		
+					<li>	
+							
+
 						<a href="login.html">
 							<span class="icono">
 								<img src="imagenes/account.png">
@@ -77,8 +79,11 @@ window.onclick = function(event) {
 						<span id="output">
 						</span>
 						
+							
 						 </a>
 					</li>
+
+						
 	
 					<li>
 						<a href="creada.html">
@@ -104,9 +109,11 @@ window.onclick = function(event) {
 		</div>
 
 		<script>
-  			var username = localStorage.getItem("username");
-  			document.getElementById("output").innerHTML =username;
-		</script>
+			var usuario = localStorage.getItem("usuario");
+			if (usuario) {
+			document.getElementById("output").innerHTML = usuario;
+			}
+			</script>
 
 	
 	</section>

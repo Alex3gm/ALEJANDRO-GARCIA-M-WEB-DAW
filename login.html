@@ -61,28 +61,59 @@
 
       </script>
 
-      <script>
-        const value = document.forms["value"];
+<script>
+  const resgistrationForm = document.forms["evaluar"];
 
-        loginForm.addEventListener("submit", (event) => {
-          event.preventDefault(); // Evita que se envíe el formulario hasta que los campos estén correctos
+  resgistrationForm.addEventListener("submit", (event) => {
+    event.preventDefault(); // Evitar que se envíe el formulario hasta que los campos estén correctos
 
-          const usuario = loginForm.elements["usuario"].value;
-          const contraseña = loginForm.elements["contraseña"].value;
+    const usuario = resgistrationForm.elements["usuario"].value;
+    const correo = resgistrationForm.elements["correo"].value;
+    const contraseña1 = resgistrationForm.elements["contraseñauno"].value;
+    const contraseña2 = resgistrationForm.elements["contraseñados"].value;
 
-          if (!usuario) {
-          alert("El campo Usuario no puede estar vacío");
-          return;
-          }
+    if (!usuario || !correo || !contraseña1 || !contraseña2) {
+      alert("Por favor, completa todos los campos");
+      return;
+    }
 
-          if (contraseña.length < 5) {
-          alert("La contraseña debe tener al menos 5 caracteres");
-          return;
-          }
+    if (contraseña1 !== contraseña2) {
+      alert("Las contraseñas no coinciden");
+      return;
+    }
 
-  // Aquí puedes hacer lo que necesites con los datos, como enviarlos al servidor o almacenarlos localmente
-        });
-      </script>
+    if (contraseña1.length < 5) {
+      alert("La contraseña debe tener al menos 5 caracteres");
+      return;
+    }
+
+    // Crear objeto FormData y agregar los datos del formulario
+    const formData = new FormData();
+    formData.append("usuario", usuario);
+    formData.append("correo", correo);
+    formData.append("contraseña", contraseña1);
+
+    // Realizar la solicitud POST a un script PHP utilizando la función fetch
+    fetch("archivologin.php", {
+      method: "POST",
+      body: formData,
+    })
+      .then(response => response.text())
+      .then(data => {
+        // Procesar la respuesta del servidor
+        console.log(data); // Aquí puedes realizar acciones adicionales o mostrar mensajes al usuario
+
+        // Guardar el usuario en el localStorage
+        localStorage.setItem("usuario", usuario);
+
+        // Redireccionar al archivo deseado
+        window.location.href = "index.html";
+      })
+      .catch(error => {
+        console.error("Error en la solicitud:", error);
+      });
+  });
+</script>
 
 
     </body>
