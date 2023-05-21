@@ -551,6 +551,7 @@ height: 20%;
 /*-- Div feed RSS ---------------------------------------------------*/
 
 #feedContainer {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   max-width: 85%;
 	height: 15%;
   display: flex;
@@ -567,6 +568,7 @@ height: 20%;
 }
 
 .feedItem {
+  
   flex: 0 0 auto;
   margin-right: 10px;
   background-color: #ffffff;
