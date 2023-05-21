@@ -551,31 +551,40 @@ height: 20%;
 /*-- Div feed RSS ---------------------------------------------------*/
 
 .carousel-container {
-  display: flex;
-  overflow: hidden;
   width: 100%;
+  overflow: hidden;
 }
 
 .carousel {
   display: flex;
-  animation: carouselAnimation 10s infinite;
+  transition: transform 0.5s ease;
 }
 
-.feedItem {
+.news-item {
   flex: 0 0 auto;
-  width: 25%; /* Ajusta el ancho según la cantidad de noticias que desees mostrar en un solo carrusel */
-  padding: 10px;
-  box-sizing: border-box;
+  width: 300px;
+  padding: 20px;
+  margin-right: 20px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
 }
 
-@keyframes carouselAnimation {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+.news-item img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
 }
+
+.news-item h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.news-item p {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
 
 
 /*-- Pie de página ---------------------------------------------------*/
