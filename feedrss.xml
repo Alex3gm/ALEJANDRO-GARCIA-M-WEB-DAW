@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Ultimas noticias sobre AGM Project </title>
+    <link>https://alex3gm.github.io/ALEJANDRO-GARCIA-M-WEB-DAW</link>
+    <description>Noticias sobre la web</description>
+    <language>es</language>
+    <pubDate>Mon, 21 May 2023 10:00:00 GMT</pubDate>
+    <lastBuildDate>Mon, 21 May 2023 10:00:00 GMT</lastBuildDate>
+    <docs>https://alex3gm.github.io/ALEJANDRO-GARCIA-M-WEB-DAW</docs>
+    <generator>Alejandro Garcia Macia</generator>
+    
+    <!-- elementos de las noticias -->
+    <item>
+      <title>Nuevos lanzamientos junio</title>
+      <link>https://alex3gm.github.io/ALEJANDRO-GARCIA-M-WEB-DAW</link>
+      <description>Coleccion de verano</description>
+      <pubDate>Mon, 21 May 2023 09:00:00 GMT</pubDate>
+      <guid>Identificador único de la noticia 1</guid>
+    </item>
+    
+    <item>
+      <title>¿Ultimas unidades!</title>
+      <link>https://alex3gm.github.io/ALEJANDRO-GARCIA-M-WEB-DAW</link>
+      <description>¿Acaso vas a ser el unico que se quede sin esta sudadera? Rapido unidades limitadas a precio único!</description>
+      <pubDate>Mon, 20 May 2023 15:30:00 GMT</pubDate>
+      <guid>Identificador único de la noticia 2</guid>
+    </item>
+
+    <item>
+      <title>cxcx</title>
+      <link>https://alex3gm.github.io/ALEJANDRO-GARCIA-M-WEB-DAW</link>
+      <description>¿Acaso vas a ser el unico que se quede sin esta sudadera? Rapido unidades limitadas a precio único!</description>
+      <pubDate>Mon, 20 May 2023 15:30:00 GMT</pubDate>
+      <guid>3</guid>
+    </item>
+    
+    <!--  más noticias aquí -->
+    
+  </channel>
+</rss>

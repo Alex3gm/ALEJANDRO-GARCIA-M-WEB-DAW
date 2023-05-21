@@ -548,6 +548,36 @@ height: 20%;
 	font-weight: bold;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+/*-- Div feed RSS ---------------------------------------------------*/
+
+.feed {
+  display: flex;
+  flex-direction: column;
+}
+
+.post {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.post-title {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.post-description {
+  margin-bottom: 10px;
+}
+
+.post-link {
+  color: blue;
+}
+
+
+
+
+
 
 /*-- Pie de página ---------------------------------------------------*/
 

@@ -8,7 +8,6 @@
 
 <body>
 
-
     <header>
         <div class="logo-container">
           <a href="index.html">
@@ -20,20 +19,20 @@
       <div id="container">
         <div id="login-form">
           <h1>Inicio de sesión</h1>
-          <form>
-            <input type="text" placeholder="Usuario">
-            <input type="password" placeholder="Contraseña">
+          <form name="value">
+            <input type="text" placeholder="Usuario" name="usuario">
+            <input type="password" placeholder="Contraseña" name="contraseñauno">
             <button type="submit">Iniciar sesión</button>
             <p>¿No tienes una cuenta? <a href="#" id="signup-link">Regístrate aquí</a></p>
           </form>
         </div>
         <div id="signup-form" style="display:none;">
           <h1>Registro</h1>
-          <form>
-            <input type="text" placeholder="Usuario">
-            <input type="email" placeholder="Correo electrónico">
-            <input type="password" placeholder="Contraseña">
-            <input type="password" placeholder="Confirmar contraseña">
+          <form name="evaluar">
+            <input type="text" placeholder="Usuario" name="usuario">
+            <input type="email" placeholder="Correo electrónico" name="correo">
+            <input type="password" placeholder="Contraseña" name="contraseñauno">
+            <input type="password" placeholder="Confirmar contraseña" name="contraseñados">
             <button type="submit">Registrarse</button>
             <p>¿Ya tienes una cuenta? <a href="#" id="login-link">Inicia sesión aquí</a></p>
           </form>
@@ -41,6 +40,9 @@
       </div>
       
       <script>
+
+
+
         const loginForm = document.getElementById("login-form");
         const signupForm = document.getElementById("signup-form");
         const loginLink = document.getElementById("login-link");
@@ -55,6 +57,33 @@
           signupForm.style.display = "none";
           loginForm.style.display = "block";
         });
+
+
       </script>
+
+      <script>
+        const value = document.forms["value"];
+
+        loginForm.addEventListener("submit", (event) => {
+          event.preventDefault(); // Evita que se envíe el formulario hasta que los campos estén correctos
+
+          const usuario = loginForm.elements["usuario"].value;
+          const contraseña = loginForm.elements["contraseña"].value;
+
+          if (!usuario) {
+          alert("El campo Usuario no puede estar vacío");
+          return;
+          }
+
+          if (contraseña.length < 5) {
+          alert("La contraseña debe tener al menos 5 caracteres");
+          return;
+          }
+
+  // Aquí puedes hacer lo que necesites con los datos, como enviarlos al servidor o almacenarlos localmente
+        });
+      </script>
+
+
     </body>
   </html>
