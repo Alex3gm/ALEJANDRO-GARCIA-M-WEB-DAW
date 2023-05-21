@@ -439,9 +439,10 @@ window.addEventListener('scroll', () => {
 </section>
 
 <section>
-	<div id="feedContainer"></div>
+		<div id="feedContainer">
+		<div id="carouselContainer">
   
-	<script>
+		<script>
 	  fetch('feedrss.xml')
 		.then(response => response.text())
 		.then(data => {
@@ -476,7 +477,10 @@ window.addEventListener('scroll', () => {
 		.catch(error => {
 		  console.error('Error al obtener el feed:', error);
 		});
-	</script>
+		
+			</script>
+			</div>
+	</div>
   </section>
   
 

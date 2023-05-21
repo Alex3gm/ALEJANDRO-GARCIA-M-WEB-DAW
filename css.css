@@ -550,28 +550,34 @@ height: 20%;
 }
 /*-- Div feed RSS ---------------------------------------------------*/
 
-.feed {
-  display: flex;
-  flex-direction: column;
+.feedContainer {
+  overflow: hidden; /* Oculta el contenido que desborde */
 }
 
-.post {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 10px;
+#carouselContainer {
+  display: flex; /* Muestra los divs de noticias en una fila */
+  animation: carousel 10s linear infinite; /* Animación para mover el carrusel */
 }
 
-.post-title {
-  font-size: 18px;
-  margin-bottom: 5px;
+.feedItem {
+  width: 300px; /* Ancho del div de la noticia */
+  height: 300px; /* Alto del div de la noticia */
+  margin-right: 20px; /* Espacio entre los divs de las noticias */
 }
 
-.post-description {
-  margin-bottom: 10px;
+.feedItem img {
+  width: 100%; /* Ajusta la imagen al ancho del div */
+  height: 100%; /* Ajusta la imagen al alto del div */
+  object-fit: cover; /* Ajusta la imagen sin deformarla */
 }
 
-.post-link {
-  color: blue;
+@keyframes carousel {
+  0% {
+    transform: translateX(0); /* Empieza desde la posición inicial */
+  }
+  100% {
+    transform: translateX(-320px); /* Se desplaza un div hacia la izquierda */
+  }
 }
 
 
