@@ -439,6 +439,11 @@ window.addEventListener('scroll', () => {
 </section>
 
 <section>
+
+	<div class="Titulo">
+		<p id="tituloimagen2">NOTICIAS<p>
+		<p id="subtituloimagen2">Ultimas noticias acerca de la web</p>
+	</div>
 	
 	<div id="feedContainer"></div>
 		
@@ -455,10 +460,18 @@ window.addEventListener('scroll', () => {
 			for (let i = 0; i < items.length; i++) {
 			  const title = items[i].getElementsByTagName('title')[0]?.textContent || '';
 			  const description = items[i].getElementsByTagName('description')[0]?.textContent || '';
-	  
+				
 			  const entryContainer = document.createElement('div');
 			  entryContainer.classList.add('feedItem');
-	  
+
+			  const link = items[i].getElementsByTagName('link')[0]?.textContent || ''; // Modificar la etiqueta <link> según corresponda en tu XML
+
+				// Agrega un controlador de eventos al div
+				entryContainer.addEventListener('click', () => {
+				// Redirige al enlace al hacer clic en el div
+				window.location.href = link;
+				});
+					
 			  const titleElement = document.createElement('h3');
 			  titleElement.textContent = title;
 			  entryContainer.appendChild(titleElement);
@@ -471,7 +484,7 @@ window.addEventListener('scroll', () => {
 			}
 	  
 			// Desplazamiento horizontal del contenedor al mover el cursor en los extremos
-			const scrollSpeed = 20;
+			const scrollSpeed = 15;
 			const scrollStartThreshold = 50; // Ajusta este valor para controlar el punto de inicio del desplazamiento
 			let isMovingLeft = false;
 			let isMovingRight = false;
