@@ -442,7 +442,7 @@ window.addEventListener('scroll', () => {
 	
 	<div id="feedContainer"></div>
 		
-  
+<script>
 	fetch('feedrss.xml')
     .then(response => response.text())
     .then(data => {
@@ -474,8 +474,7 @@ window.addEventListener('scroll', () => {
       console.error('Error al obtener el feed:', error);
     });
 </script>
-</div>
-</div>
+
   </section>
   
 
